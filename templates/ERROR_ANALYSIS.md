@@ -1,67 +1,63 @@
-# Error analysis — <artifact> — <date>
+# Error analysis — <program or package> — <date>
 
-> Three-line summary first: what was measured, what was found, what was changed.
+> For the stage 9 planted-bug hunt and any time a program fails more than a handful of tests. Three-line summary first: what was measured, what was found, what was changed.
 
-**Measured:** `<artifact>` on `<eval set>`, n=`<n>`, baseline pass `<value>` (CI `<range>`), run `evals/runs/<dir>`.
-**Found:** `<count>` failures open-coded into `<k>` buckets; largest was `<bucket>` at `<count>` (`<pct>`%).
-**Changed:** `<fix>`; pass now `<value>` (CI `<range>`), run `evals/runs/<dir>`.
+**Measured:** `<program>` against `<test set>`, n=`<n>` tests, `<f>` failing, run `eval/runs/<dir>`.
+**Found:** `<f>` failures classified into `<k>` bestiary categories; the largest was `<category>` with `<count>`.
+**Changed:** `<fixes>`; now `<n − remaining>` passing, run `eval/runs/<dir>`.
 
 ## 1. Setup
 
-- Artifact and commit:
-- Eval set and version (case count, source mix: hand / assisted / production / synthetic):
-- Models (agent, judge) and prompt versions:
-- Runs per case (k):
+- Program and commit:
+- Test set (visible / hidden / my own) and count:
+- Tools used to find each bug (traceback / debugger / logging / `timeit` / reading):
 
 ## 2. Failure collection
 
-Number of failures collected: `<n>` (minimum 50). Selection method: all failures / random sample of failures / stratified by tag.
+Every failing test, one row, written *before* fixing anything. The code column is one sentence saying what is wrong, not how to fix it.
 
-## 3. Open coding
+| Test or case ID | Symptom (first line of the failure) | Code (one sentence: what went wrong) |
+|---|---|---|
+| s09-r11e1-a | `assert overdue(...) == 3` got 4 | Loop counts the boundary day as overdue; half-open range misread. |
+| | | |
 
-One sentence per failure, written *before* any attempt to categorise. Keep the full list in `reports/error-analysis-<date>-codes.jsonl` with fields `case_id`, `run`, `code`. Reproduce the first ten here so a reader can judge the coding quality:
+## 3. Classification
 
-| Case | Code (one sentence, what went wrong) |
-|---|---|
-| s0N-c012 | Agent called search with the user's full question instead of extracting the entity. |
-| | |
+Group the codes by bestiary ID. A failure that fits no entry gets a proposed new ID and a snippet.
 
-## 4. Taxonomy
+| Bestiary ID | Name | Count | Loud / quiet | Example test |
+|---|---|---|---|---|
+| F01 | Off-by-one | | quiet | |
+| | | | | |
 
-Clusters derived from the codes. Each bucket gets a short name, a definition, a count, the bestiary ID if one exists, and whether a new bestiary entry is proposed.
+## 4. Time per bug
 
-| Bucket | Definition | Count | % | Bestiary | Example case |
-|---|---|---|---|---|---|
-| B1 | | | | | |
-| B2 | | | | | |
-| B3 | | | | | |
-| Other | | | | | |
+| Bug | Minutes to locate | Minutes to fix | Tool that found it |
+|---|---|---|---|
+| | | | |
 
-Buckets become eval tags (`tag:B1-<name>`) so they can be tracked over time.
+The slowest bug: what made it slow? Was it quiet? Which Inspect tool would have found it faster?
 
-## 5. The fix
+## 5. The fixes
 
-- Target bucket: B`<n>` (the largest, unless there is a stated reason to pick another).
-- Hypothesis: why this bucket occurs.
-- Change made (prompt version bump / tool change / guardrail / retrieval change / code), with the diff or link:
-- Change made to the eval set, if any (new cases added for this bucket; IDs):
+For each bug: the test that now fails before the fix and passes after (its ID), and the one-line diff or a link to the commit.
+
+| Bug | Test added or used | Commit |
+|---|---|---|
+| | | |
 
 ## 6. Re-measurement
 
-| | Before | After | Δ |
-|---|---|---|---|
-| Overall pass rate (CI) | | | |
-| Target bucket count | | | |
-| Other buckets (any regression?) | | | |
-| Cost per task | | | |
-| p95 latency | | | |
+| | Before | After |
+|---|---|---|
+| Tests passing | | |
+| Quiet failures remaining | | |
+| Coverage (if measured) | | |
 
-State plainly whether the CIs overlap. If they do, the improvement is not demonstrated; say so and say what n would be needed.
+## 7. What the tests missed
 
-## 7. Next bucket
+Bugs found by reading or by the debugger that no test caught. For each: the test you added, and why it did not exist before.
 
-Which bucket is now largest, and the hypothesis for it. This is the first line of the next error-analysis report.
+## 8. Next
 
-## 8. Judge check (if an LLM judge was used)
-
-Did the judge's verdict agree with your own reading on the failures you coded? Disagreements and what they imply for the rubric.
+The bestiary category you will meet again. What habit (Oath item, `ruff` rule, test pattern) prevents it.

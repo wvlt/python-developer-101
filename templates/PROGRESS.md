@@ -1,8 +1,8 @@
 # Progress — <learner>
 
-> Lives at the root of your fork. Updated as you go, not from memory. This file is the raw data behind the feedback you will give and the trajectory you will show at the portfolio walkthrough.
+> Lives at the root of your fork. Updated as you go, not from memory. This file is the raw data behind the feedback you will give and the trajectory you will show at the portfolio walkthrough. Rows are generated from the briefs by `just progress`; ticks and notes are yours and are preserved.
 
-**Curriculum version started on:** · **Start date:** · **Python self-rating at start:** /10 · **AI/LLM self-rating at start:** /10
+**Curriculum version started on:** · **Start date:** · **Programming self-rating at start:** /10 · **Hours per week available:**
 
 ## Rung log
 
@@ -11,28 +11,25 @@ One row per rung, filled when you finish the rung's Check. "Stall" means > 30 mi
 | Rung | Started | Minutes | Run | See | Say | Stall? | Note |
 |---|---|---|---|---|---|---|---|
 | s00-r0 | | | ☐ | ☐ | ☐ | | |
-| s00-r1 | | | ☐ | ☐ | ☐ | | |
-| s00-r2 | | | ☐ | ☐ | ☐ | | |
-| s00-r3 | | | ☐ | ☐ | ☐ | | |
-| s00-r4 | | | ☐ | ☐ | ☐ | | |
-| s00-r5 | | | ☐ | ☐ | ☐ | | |
-| s00-r6 | | | ☐ | ☐ | ☐ | | |
-| s00-r7 | | | ☐ | ☐ | ☐ | | |
-| s01-r0 | | | ☐ | ☐ | ☐ | | |
-| s01-r1 | | | ☐ | ☐ | ☐ | | |
-| … | | | | | | | |
 
 ## Gate log
 
 Copied from each gate review.
 
-| Stage | Date | Verdict | Build | Measure | Break | Observe | Judgment | Communication | Hours (actual / budget) |
-|---|---|---|---|---|---|---|---|---|---|
-| 0 | | self | | | | | — | | / 2 |
-| 1 | | | | | | | | | / 8 |
-| 2 | | | | | | | | | / 12 |
-| … | | | | | | | | | |
+| Stage | Date | Verdict | Hidden (passed/of) | Build | Measure | Break | Inspect | Judgment | Communication | Hours (actual / budget) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | | self | — | | — | | | — | | / 2 |
+| 1 | | | / 49 | | | | | | | / 12 |
+| 2 | | | / 56 | | | | | | | / 12 |
+| 3 | | | / 60 | | | | | | | / 14 |
+| 4 | | | / 60 | | | | | | | / 14 |
+| 5 | | | / 60 | | | | | | | / 14 |
+| 6 | | | / 50 | | | | | | | / 12 |
+| 7 | | | / 50 | | | | | | | / 12 |
+| 8 | | | / 50 | | | | | | | / 14 |
+| 9 | | | / 12 bugs | | | | | | | / 14 |
+| 10 | | | criteria | | | | | | | / 20 |
 
-## Spend
+## Hours
 
 See `LEDGER.md`.

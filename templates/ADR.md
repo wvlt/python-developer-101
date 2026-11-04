@@ -1,4 +1,4 @@
-# ADR-NNN — <short title in the imperative, e.g. "Use a fixed workflow for invoice extraction">
+# ADR-NNN — <short title in the imperative, e.g. "Use a dataclass for Book and a class for Library">
 
 - **Status:** proposed / accepted / superseded by ADR-NNN
 - **Date:**
@@ -7,7 +7,7 @@
 
 ## Context
 
-What problem forced a decision. Two to five sentences. Include the constraint that matters most (cost, latency, risk, time).
+What problem forced a decision. Two to five sentences. Include the constraint that matters most (what changes later, who reads the code, how big the data is, how often it runs).
 
 ## Options considered
 
@@ -16,11 +16,11 @@ For each option: one line of description, then the measured evidence. No adjecti
 ### Option A — <name>
 
 - Description:
-- Pass rate: `<value>` (n=`<n>`, CI `<range>`), run `evals/runs/<dir>`
-- Cost per task: USD
-- p95 latency:
-- Failure buckets introduced or removed:
-- Other consequences (security, operability, complexity):
+- Lines of code (excluding tests):
+- Tests needed to cover it: `<n>`; passing: `<n>`
+- What breaks if the requirement changes in the likely way (one sentence, with the number of places to edit):
+- Bestiary risks it introduces or removes:
+- Time to read and explain to a peer (minutes, measured):
 
 ### Option B — <name>
 
@@ -42,7 +42,7 @@ One or two sentences per rejected option, pointing at the evidence above.
 
 - What becomes easier.
 - What becomes harder or is now a known risk.
-- What would make us revisit this decision (a number, a date, or an event).
+- What would make us revisit this decision (a number, a date, or an event: "more than three record types"; "the file exceeds 10 MB").
 
 ## Kill criteria for this decision
 

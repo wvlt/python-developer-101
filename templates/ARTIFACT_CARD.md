@@ -1,6 +1,6 @@
-# Artifact Card — Stage NN: <name>
+# Artefact Card — Stage NN: <name>
 
-> One page. Every field filled. "TBD" is a gate failure. Numbers carry n and, where applicable, a 95% CI.
+> One page. Every field filled. "TBD" is a gate failure. Every number names the run directory it came from.
 
 ## Identity
 
@@ -12,77 +12,61 @@
 
 ## What it does
 
-Two sentences, for a stranger. What goes in, what comes out, what it is for.
+Two sentences, for a stranger who does not program. What goes in, what comes out, what it is for.
 
-## How well it works
+## How to run it
 
-| Metric | Value | n | CI (95%) | Run |
-|---|---|---|---|---|
-| Primary eval pass rate | | | | `evals/runs/<dir>` |
-| pass^5 (if applicable) | | | | |
-| Per-provider: <provider A> | | | | |
-| Per-provider: <provider B> | | | | |
-| Per-provider: local | | | | |
-| Stage-specific metric (e.g. recall@5, attack success rate) | | | | |
+The exact command, from a fresh clone, and one line of expected output.
 
-Judge model (if any): `<provider/model>`, calibration agreement: `<value>` on `<n>` cases.
+```
+just data
+uv run <command>
+```
 
-## What it costs
+## How it was tested
 
-- Cost per task (mean / p95): USD
-- Tokens per task (mean / p95):
-- Latency per task (p50 / p95):
-- Total spend this stage: USD (from `LEDGER.md`)
+| Set | Passed | Of | Run directory |
+|---|---|---|---|
+| Visible (`just test NN`) | | | — |
+| Hidden (`just eval NN`) | | | `eval/runs/<dir>` |
+| My own tests (stage 6 onward) | | | |
+| Of mine that catch the planted bug (stage 6) | | | |
+| Coverage (stage 9 onward) | | % | |
+
+One test that found a real bug in my code, and what the bug was:
 
 ## How it fails
 
-Top three failure buckets from error analysis, with counts and the bestiary ID:
+The three inputs most likely to break it, tried, with what happened. Name the bestiary ID.
 
-1. `<bucket>` — n=<count> — bestiary <ID> — status: fixed / mitigated / open
-2.
-3.
+| Input | What happened | Loud / quiet | Bestiary | Status (fixed / handled / open) |
+|---|---|---|---|---|
+| | | | | |
+| | | | | |
+| | | | | |
 
-Exemplar traces: `traces/examples/success.jsonl`, `recovered.jsonl`, `unrecovered.jsonl`.
+## What I looked at inside it
+
+Which Inspect tool this stage (f-string print / `just trace` / debugger / logging / `timeit`), on which line, and what it showed that I did not expect.
 
 ## What was decided
 
-Links to ADRs in `decisions/`, one line each:
+From stage 7: links to ADRs in `decisions/`, one line each. Before stage 7: the one structural choice you made (loop vs chain of `if`; list vs dict) and why in ten words.
 
 - ADR-001 — <title> — <decision in ten words>
 
-## Guardrails in place
-
-List each mechanism, what it prevents, and where it is in the trace:
-
-- `<mechanism>` — prevents `<failure>` — trace event `<kind>`
-
-## Context budget (stage 5 onward)
-
-| Component | Tokens (max) | Priority when trimming |
-|---|---|---|
-| System prompt | | |
-| History | | |
-| Retrieved | | |
-| Tool results | | |
-| Reserve for output | | |
-
 ## Kill criteria
 
-When would you *not* use this artifact or technique? Be specific to this problem.
+When would you *not* write this program? Answer for this problem: would a spreadsheet, a shell one-liner or a standard-library call have done it? If you ran it once, would you have written it?
 
 ## AI assistance
 
-What was AI-assisted, with what, and what you did to verify it. Which parts were written unassisted (stage 2 loop is required to be).
+Through stage 6: confirm no code was written or suggested by an assistant; list anything an assistant explained (an error message, a concept). From stage 7: what you asked it to review, what it said, and what you changed or declined to change.
 
-## Models and versions
+## Pins
 
-| Role | Provider / model | Pinned in `MODELS.md`? |
-|---|---|---|
-| Agent | | |
-| Judge | | |
-| Embeddings (S5+) | | |
-| Local | | |
+Python and tool versions as in `PINS.md` at the commit above. Any deviation (a different Python patch; a tool version) and why.
 
-## What I would do with one more week
+## What I would do with one more day
 
-Three bullets, in priority order, each tied to a failure bucket or a metric.
+Three bullets, in priority order, each tied to a failing input or a test.

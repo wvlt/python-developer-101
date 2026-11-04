@@ -1,23 +1,25 @@
 # Gate review — Stage NN — <learner> — <date>
 
-> Filled by the reviewer in the PR. Twenty minutes. Procedure in [docs/14-rubrics.md](../docs/14-rubrics.md#how-a-gate-review-runs-20-minutes). Only "Pass" passes; "Revise" names the rung or artifact; "Redo" is rare and explained.
+> Filled by the reviewer in the PR. Twenty minutes. Procedure in [docs/14-rubrics.md](../docs/14-rubrics.md#how-a-gate-review-runs-20-minutes). Only "Pass" passes; "Revise" names the rung or artefact; "Redo" is rare and explained.
 
 - **Reviewer:** · **PR:** · **Curriculum version:**
-- **Artifact Card:** link · **Primary run directory:** link
+- **Artefact Card:** link · **Eval run directory:** link
 
 ## Reproduction
 
 | Picked | Claimed | Reproduced | Match? |
 |---|---|---|---|
-| number 1 (`<field>`) | | | |
-| number 2 (`<field>`) | | | |
+| `just eval NN` hidden count | / | / | |
+| mini-project on the brief's input | | | |
+| mini-project on my malformed input: `<input>` | — | message / traceback / wrong output | |
 | gate item `sNN-gK` | evidence claimed | evidence found | |
 
-## Trace reading
+## Explanation and Say
 
-Exemplar read: `traces/examples/unrecovered.jsonl`. Learner narrated without code: yes / partly / no.
-Bestiary ID named by learner: · Correct: yes / no.
-*Say* questions asked (two rungs): `sNN-rM.say` → ok / weak / no · `sNN-rK.say` → ok / weak / no.
+Function picked: `<name>`. Explained line by line without hesitation: yes / partly / no.
+*Say* questions asked (three rungs): `sNN-rM.say` → ok / weak / no · `sNN-rK.say` → ok / weak / no · `sNN-rJ.say` → ok / weak / no.
+From stage 4: breakpoint set and a variable shown on request: yes / no.
+Kill-criterion question answered for this problem (not generically): yes / no.
 
 ## Six-dimension rubric
 
@@ -26,11 +28,11 @@ Bestiary ID named by learner: · Correct: yes / no.
 | Build | | | |
 | Measure | | | |
 | Break | | | |
-| Observe | | | |
+| Inspect | | | |
 | Judgment | | | |
 | Communication | | | |
 
-Blocking "Not yet": Build / Measure / Break at any stage; Observe / Judgment / Communication from stage 3.
+Blocking "Not yet": Build / Measure / Break at any stage; Inspect / Judgment / Communication from stage 4.
 
 ## Gate items
 
@@ -41,8 +43,8 @@ Stage items: all ticked with pointers? yes / list missing with IDs.
 
 **Pass / Revise / Redo**
 
-If Revise: the specific items, each with rung ID or artifact and what would satisfy it.
+If Revise: the specific items, each with rung ID or artefact and what would satisfy it.
 
 ## Feedback to the curriculum
 
-Anything in this review that points at the brief rather than the learner (criterion un-checkable as written, rung whose *See* nobody answers, missing rung). Copy to the stage's `REVISIONS.md` as open feedback.
+Anything in this review that points at the brief rather than the learner (criterion un-checkable as written, rung whose *See* nobody answers, hidden case that tests something untaught, missing rung). Copy to the stage's `REVISIONS.md` as open feedback.

@@ -1,1 +1,196 @@
-{"stages":[]}
+{
+  "updated": "2026-11-04",
+  "curriculum_version": "v0.5.0",
+  "learner": "first learner",
+  "course": {
+    "title": "Python Developer",
+    "title_em": "101",
+    "org": "AI Tech Institute",
+    "org_url": "https://www.aitechinstitute.com.au/",
+    "tagline": "Production-grade, not notebooks.",
+    "repo_url": "https://github.com/wvlt/python-developer-101"
+  },
+  "now": {
+    "headline": "Stage 0 — Hello Python",
+    "detail": "Install Python and the editor from the links in PINS.md, open a terminal, print one line, then change one thing at a time. Eight rungs, about two hours, no account, no git yet. Tick Run/See/Say in PROGRESS.md after each rung; when all eight are ticked, start stage 1 rung 0.",
+    "next": "Stage 1 — Values and names: rung 0 installs uv, just and git, clones the course and turns 57 tests red; rungs 1–9 turn them green and end with the receipt.",
+    "later": "Stage 2 — Decisions and repetition (ruff, GitHub, the text game). Stage 3 is rung-numbered while you are in stage 2."
+  },
+  "tiers": {
+    "A": "Talking to the machine",
+    "B": "Structure",
+    "C": "Objects",
+    "D": "Craft"
+  },
+  "learner_states": [
+    "locked",
+    "ready",
+    "in_progress",
+    "feedback",
+    "revising",
+    "passed"
+  ],
+  "build_states": [
+    "outline",
+    "rung_numbered",
+    "verified",
+    "ready"
+  ],
+  "stages": [
+    {
+      "id": "s00",
+      "name": "Hello Python",
+      "tier": "A",
+      "hours": 2,
+      "build": "rung_numbered",
+      "learner": "in_progress",
+      "note": "Ungated. Eight rungs with Checks; reference run against the pins recorded at v1.0.0."
+    },
+    {
+      "id": "s01",
+      "name": "Values and names",
+      "tier": "A",
+      "hours": 12,
+      "build": "rung_numbered",
+      "learner": "ready",
+      "note": "63 hidden cases, threshold 57; solutions green in CI. Verified when a maintainer runs every code block on the pins."
+    },
+    {
+      "id": "s02",
+      "name": "Decisions and repetition",
+      "tier": "A",
+      "hours": 12,
+      "build": "rung_numbered",
+      "learner": "locked",
+      "note": "62 hidden cases, threshold 56; planted bug r9b1; GitHub at r10."
+    },
+    {
+      "id": "s03",
+      "name": "Collections",
+      "tier": "A",
+      "hours": 14,
+      "build": "outline",
+      "learner": "locked",
+      "note": "Rung-numbered while the learner is in s02; fixture literals generated from data/library/."
+    },
+    {
+      "id": "s04",
+      "name": "Functions",
+      "tier": "B",
+      "hours": 14,
+      "build": "outline",
+      "learner": "locked",
+      "note": "Exercise shape changes to function stubs; debugger at r10."
+    },
+    {
+      "id": "s05",
+      "name": "Errors and files",
+      "tier": "B",
+      "hours": 14,
+      "build": "outline",
+      "learner": "locked",
+      "note": "Fixture arrives as files; the four broken files are gate cases."
+    },
+    {
+      "id": "s06",
+      "name": "Modules and tooling",
+      "tier": "B",
+      "hours": 12,
+      "build": "outline",
+      "learner": "locked",
+      "note": "Learner writes tests from r8; mutation check in just eval 06 is new harness work."
+    },
+    {
+      "id": "s07",
+      "name": "Classes and objects",
+      "tier": "C",
+      "hours": 12,
+      "build": "outline",
+      "learner": "locked",
+      "note": "First required ADR; AI review of own code allowed from here."
+    },
+    {
+      "id": "s08",
+      "name": "Design and the data model",
+      "tier": "C",
+      "hours": 14,
+      "build": "outline",
+      "learner": "locked",
+      "note": "Comparison memo; context managers as author."
+    },
+    {
+      "id": "s09",
+      "name": "Writing Python well",
+      "tier": "D",
+      "hours": 14,
+      "build": "outline",
+      "learner": "locked",
+      "note": "Three fixtures to build: 200-line script, stranger's PR branch, twelve-bug package."
+    },
+    {
+      "id": "s10",
+      "name": "Capstone",
+      "tier": "D",
+      "hours": 20,
+      "build": "outline",
+      "learner": "locked",
+      "note": "Break-my-program, teach-back, hand-off to the sibling courses."
+    }
+  ],
+  "maintainer_queue": [
+    {
+      "when": "on s00 feedback",
+      "task": "Classify feedback items; apply rung changes to s00; cascade to s01 Assumes; log in REVISIONS.md. Run s00 on Windows on a machine without Python."
+    },
+    {
+      "when": "before s01 unlock",
+      "task": "Run every s01 code block on the pins (both platforms for r0); confirm the 57-red / `-k r1e` counts match the brief; mark s01 verified."
+    },
+    {
+      "when": "before s02 unlock",
+      "task": "Run every s02 code block on the pins; verify the GitHub fork, Pages and PR steps end to end on a fresh account; mark s02 verified."
+    },
+    {
+      "when": "while learner in s02",
+      "task": "Rung-number s03 with s00–s02 feedback: exercises with embedded fixture literals, hidden cases, solutions, break-lab, rubric anchors; reconcile threshold; `just progress`."
+    },
+    {
+      "when": "before s04 readiness",
+      "task": "Extend course/runner.py and conftest for function-stub exercises (import and call); provide the debugger rung's buggy program."
+    },
+    {
+      "when": "before s06 readiness",
+      "task": "Mutation check in scripts/eval.py; confirm the public API still returns the three fields (PINS.md step 6)."
+    },
+    {
+      "when": "before s09 readiness",
+      "task": "Build the 200-line script, the stranger's PR branch in upstream, and the twelve-bug package with its answer key outside the learner path; decide pre-commit rung vs stretch."
+    },
+    {
+      "when": "before s10 readiness",
+      "task": "Confirm the sibling course's Stage 0 Contract is stable; capstone hidden cases as subprocess runs on the fixture and broken files."
+    }
+  ],
+  "activity": [
+    {
+      "date": "2026-11-04",
+      "event": "v0.5: board.json, PROGRESS.md generated from the briefs, BOARD.md and README block rendered, course player published on Pages."
+    },
+    {
+      "date": "2026-11-04",
+      "event": "v0.4: stages 0–2 rung-numbered with Checks, exercises, visible and hidden tests, solutions and break-labs; stages 3–10 outlined with binding Contracts and Gate IDs."
+    },
+    {
+      "date": "2026-11-04",
+      "event": "v0.3: docs/01–17, domain templates (FAILURE_REVIEW, BREAK_MY_PROGRAM, PROJECT_README), AGENTS.md, CONTRIBUTING.md, CHANGELOG.md, LEDGER.md (hours)."
+    },
+    {
+      "date": "2026-11-04",
+      "event": "v0.2: course player, scripts and workflows copied verbatim from the reference course; PINS.md verified live; deterministic library fixture; eval harness."
+    },
+    {
+      "date": "2026-11-04",
+      "event": "v0.1: CONTEXT.md, intent, ADR-001..004, repository created."
+    }
+  ]
+}

@@ -1,0 +1,2213 @@
+{
+ "updated": "2026-11-04",
+ "curriculum_version": "v0.5.0",
+ "learner": "first learner",
+ "course": {
+  "title": "Python Developer",
+  "title_em": "101",
+  "org": "AI Tech Institute",
+  "org_url": "https://www.aitechinstitute.com.au/",
+  "tagline": "Production-grade, not notebooks.",
+  "repo_url": "https://github.com/wvlt/python-developer-101"
+ },
+ "now": {
+  "headline": "Stage 0 — Hello Python",
+  "detail": "Install Python and the editor from the links in PINS.md, open a terminal, print one line, then change one thing at a time. Eight rungs, about two hours, no account, no git yet. Tick Run/See/Say in PROGRESS.md after each rung; when all eight are ticked, start stage 1 rung 0.",
+  "next": "Stage 1 — Values and names: rung 0 installs uv, just and git, clones the course and turns 57 tests red; rungs 1–9 turn them green and end with the receipt.",
+  "later": "Stage 2 — Decisions and repetition (ruff, GitHub, the text game). Stage 3 is rung-numbered while you are in stage 2."
+ },
+ "tiers": {
+  "A": "Talking to the machine",
+  "B": "Structure",
+  "C": "Objects",
+  "D": "Craft"
+ },
+ "stages": [
+  {
+   "id": "s00",
+   "name": "Hello Python",
+   "tier": "A",
+   "hours": 2,
+   "build": "rung_numbered",
+   "learner": "in_progress",
+   "note": "Ungated. Eight rungs with Checks; reference run against the pins recorded at v1.0.0.",
+   "brief": "stages/00-hello-python/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "The machine",
+     "rungs": [
+      {
+       "id": "s00-r0",
+       "n": "0",
+       "title": "Install Python and the editor",
+       "minutes": 25,
+       "has_check": true,
+       "anchor": "rung-0--install-python-and-the-editor",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": true
+      },
+      {
+       "id": "s00-r1",
+       "n": "1",
+       "title": "Hello in the prompt",
+       "minutes": 10,
+       "has_check": true,
+       "anchor": "rung-1--hello-in-the-prompt",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s00-r2",
+       "n": "2",
+       "title": "The same line in a file",
+       "minutes": 15,
+       "has_check": true,
+       "anchor": "rung-2--the-same-line-in-a-file",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "One change at a time",
+     "rungs": [
+      {
+       "id": "s00-r3",
+       "n": "3",
+       "title": "Change the text; print two things",
+       "minutes": 10,
+       "has_check": true,
+       "anchor": "rung-3--change-the-text-print-two-things",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s00-r4",
+       "n": "4",
+       "title": "A number and a word",
+       "minutes": 10,
+       "has_check": true,
+       "anchor": "rung-4--a-number-and-a-word",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s00-r5",
+       "n": "5",
+       "title": "Make it fail on purpose, three ways",
+       "minutes": 20,
+       "has_check": true,
+       "anchor": "rung-5--make-it-fail-on-purpose-three-ways",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s00-r6",
+       "n": "6",
+       "title": "Ask a question",
+       "minutes": 10,
+       "has_check": true,
+       "anchor": "rung-6--ask-a-question",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "The habit",
+     "rungs": [
+      {
+       "id": "s00-r7",
+       "n": "7",
+       "title": "A folder, a file, a comment",
+       "minutes": 15,
+       "has_check": true,
+       "anchor": "rung-7--a-folder-a-file-a-comment",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 8,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "In progress",
+   "build_label": "rung-numbered",
+   "tier_name": "Talking to the machine"
+  },
+  {
+   "id": "s01",
+   "name": "Values and names",
+   "tier": "A",
+   "hours": 12,
+   "build": "rung_numbered",
+   "learner": "ready",
+   "note": "63 hidden cases, threshold 57; solutions green in CI. Verified when a maintainer runs every code block on the pins.",
+   "brief": "stages/01-values-and-names/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "The toolchain",
+     "rungs": [
+      {
+       "id": "s01-r0",
+       "n": "0",
+       "title": "Install the toolchain and clone the course",
+       "minutes": 45,
+       "has_check": true,
+       "anchor": "rung-0--install-the-toolchain-and-clone-the-course",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Numbers",
+     "rungs": [
+      {
+       "id": "s01-r1",
+       "n": "1",
+       "title": "Arithmetic",
+       "minutes": 50,
+       "has_check": true,
+       "anchor": "rung-1--arithmetic",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s01-r2",
+       "n": "2",
+       "title": "Types and conversions",
+       "minutes": 45,
+       "has_check": true,
+       "anchor": "rung-2--types-and-conversions",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Names",
+     "rungs": [
+      {
+       "id": "s01-r3",
+       "n": "3",
+       "title": "Names",
+       "minutes": 50,
+       "has_check": true,
+       "anchor": "rung-3--names",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Text",
+     "rungs": [
+      {
+       "id": "s01-r4",
+       "n": "4",
+       "title": "Strings: length, index, slice",
+       "minutes": 60,
+       "has_check": true,
+       "anchor": "rung-4--strings-length-index-slice",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s01-r5",
+       "n": "5",
+       "title": "String methods",
+       "minutes": 60,
+       "has_check": true,
+       "anchor": "rung-5--string-methods",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s01-r6",
+       "n": "6",
+       "title": "f-strings and your third Inspect tool",
+       "minutes": 50,
+       "has_check": true,
+       "anchor": "rung-6--f-strings-and-your-third-inspect-tool",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "Truth",
+     "rungs": [
+      {
+       "id": "s01-r7",
+       "n": "7",
+       "title": "Truth, nothing, and the two kinds of same",
+       "minutes": 60,
+       "has_check": true,
+       "anchor": "rung-7--truth-nothing-and-the-two-kinds-of-same",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "F",
+     "title": "Save and ship",
+     "rungs": [
+      {
+       "id": "s01-r8",
+       "n": "8",
+       "title": "Save points with git",
+       "minutes": 40,
+       "has_check": true,
+       "anchor": "rung-8--save-points-with-git",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s01-r9",
+       "n": "9",
+       "title": "Mini-project: the receipt",
+       "minutes": 90,
+       "has_check": true,
+       "anchor": "rung-9--mini-project-the-receipt",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 10,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Ready",
+   "build_label": "rung-numbered",
+   "tier_name": "Talking to the machine"
+  },
+  {
+   "id": "s02",
+   "name": "Decisions and repetition",
+   "tier": "A",
+   "hours": 12,
+   "build": "rung_numbered",
+   "learner": "locked",
+   "note": "62 hidden cases, threshold 56; planted bug r9b1; GitHub at r10.",
+   "brief": "stages/02-decisions-and-repetition/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Decisions",
+     "rungs": [
+      {
+       "id": "s02-r1",
+       "n": "1",
+       "title": "`if` and `else`",
+       "minutes": 40,
+       "has_check": true,
+       "anchor": "rung-1--if-and-else",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r2",
+       "n": "2",
+       "title": "`elif`, nesting, and the one-line form",
+       "minutes": 50,
+       "has_check": true,
+       "anchor": "rung-2--elif-nesting-and-the-one-line-form",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r3",
+       "n": "3",
+       "title": "`match` and `case`",
+       "minutes": 40,
+       "has_check": true,
+       "anchor": "rung-3--match-and-case",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Repetition",
+     "rungs": [
+      {
+       "id": "s02-r4",
+       "n": "4",
+       "title": "`while`, and asking until the answer is valid",
+       "minutes": 55,
+       "has_check": true,
+       "anchor": "rung-4--while-and-asking-until-the-answer-is-valid",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r5",
+       "n": "5",
+       "title": "`for` and `range`",
+       "minutes": 50,
+       "has_check": true,
+       "anchor": "rung-5--for-and-range",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r6",
+       "n": "6",
+       "title": "`break`, `continue`, `pass`, and `else` on a loop",
+       "minutes": 40,
+       "has_check": true,
+       "anchor": "rung-6--break-continue-pass-and-else-on-a-loop",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r7",
+       "n": "7",
+       "title": "`enumerate` and `zip`",
+       "minutes": 45,
+       "has_check": true,
+       "anchor": "rung-7--enumerate-and-zip",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r8",
+       "n": "8",
+       "title": "Accumulators, flags and nested loops",
+       "minutes": 60,
+       "has_check": true,
+       "anchor": "rung-8--accumulators-flags-and-nested-loops",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Tools and the game",
+     "rungs": [
+      {
+       "id": "s02-r9",
+       "n": "9",
+       "title": "`ruff`, and a planted bug",
+       "minutes": 30,
+       "has_check": true,
+       "anchor": "rung-9--ruff-and-a-planted-bug",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r10",
+       "n": "10",
+       "title": "GitHub, your fork, and a pull request",
+       "minutes": 45,
+       "has_check": true,
+       "anchor": "rung-10--github-your-fork-and-a-pull-request",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s02-r11",
+       "n": "11",
+       "title": "Mini-project: guess the number",
+       "minutes": 100,
+       "has_check": true,
+       "anchor": "rung-11--mini-project-guess-the-number",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 11,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "rung-numbered",
+   "tier_name": "Talking to the machine"
+  },
+  {
+   "id": "s03",
+   "name": "Collections",
+   "tier": "A",
+   "hours": 14,
+   "build": "outline",
+   "learner": "locked",
+   "note": "Rung-numbered while the learner is in s02; fixture literals generated from data/library/.",
+   "brief": "stages/03-collections/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Lists",
+     "rungs": [
+      {
+       "id": "s03-r1",
+       "n": "1",
+       "title": "Lists and their methods",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-1--lists-and-their-methods",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s03-r2",
+       "n": "2",
+       "title": "`sorted()`, `key`, and a first `lambda`",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-2--sorted-key-and-a-first-lambda",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s03-r3",
+       "n": "3",
+       "title": "`min`, `max`, `sum`, `any`, `all`, `in`",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-3--min-max-sum-any-all-in",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Aliasing",
+     "rungs": [
+      {
+       "id": "s03-r4",
+       "n": "4",
+       "title": "Two names, one object",
+       "minutes": 75,
+       "has_check": false,
+       "anchor": "rung-4--two-names-one-object",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Tuples and dicts",
+     "rungs": [
+      {
+       "id": "s03-r5",
+       "n": "5",
+       "title": "Tuples and unpacking",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-5--tuples-and-unpacking",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s03-r6",
+       "n": "6",
+       "title": "Dicts",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-6--dicts",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s03-r7",
+       "n": "7",
+       "title": "Nested data",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-7--nested-data",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Sets and comprehensions",
+     "rungs": [
+      {
+       "id": "s03-r8",
+       "n": "8",
+       "title": "Sets",
+       "minutes": 40,
+       "has_check": false,
+       "anchor": "rung-8--sets",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s03-r9",
+       "n": "9",
+       "title": "Comprehensions",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-9--comprehensions",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "Choosing",
+     "rungs": [
+      {
+       "id": "s03-r10",
+       "n": "10",
+       "title": "The right collection, and copies of nested things",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-10--the-right-collection-and-copies-of-nested-things",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "F",
+     "title": "The catalogue",
+     "rungs": [
+      {
+       "id": "s03-r11",
+       "n": "11",
+       "title": "Mini-project: the catalogue",
+       "minutes": 120,
+       "has_check": false,
+       "anchor": "rung-11--mini-project-the-catalogue",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 11,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Talking to the machine"
+  },
+  {
+   "id": "s04",
+   "name": "Functions",
+   "tier": "B",
+   "hours": 14,
+   "build": "outline",
+   "learner": "locked",
+   "note": "Exercise shape changes to function stubs; debugger at r10.",
+   "brief": "stages/04-functions/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Defining",
+     "rungs": [
+      {
+       "id": "s04-r1",
+       "n": "1",
+       "title": "`def` and `return`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-1--def-and-return",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s04-r2",
+       "n": "2",
+       "title": "Arguments: positional, keyword, default, `*args`, `**kwargs`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-2--arguments-positional-keyword-default-args-kwargs",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s04-r3",
+       "n": "3",
+       "title": "The default that remembers",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-3--the-default-that-remembers",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Scope",
+     "rungs": [
+      {
+       "id": "s04-r4",
+       "n": "4",
+       "title": "Where names live",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-4--where-names-live",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Documenting",
+     "rungs": [
+      {
+       "id": "s04-r5",
+       "n": "5",
+       "title": "Docstrings, type hints, and purity",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-5--docstrings-type-hints-and-purity",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Functions as values",
+     "rungs": [
+      {
+       "id": "s04-r6",
+       "n": "6",
+       "title": "Functions are values; `lambda` deepened",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-6--functions-are-values-lambda-deepened",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s04-r7",
+       "n": "7",
+       "title": "`map`, `filter`, and multi-key sorting",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-7--map-filter-and-multi-key-sorting",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s04-r8",
+       "n": "8",
+       "title": "Closures and a first decorator",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-8--closures-and-a-first-decorator",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "Recursion",
+     "rungs": [
+      {
+       "id": "s04-r9",
+       "n": "9",
+       "title": "Recursion and when not to",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-9--recursion-and-when-not-to",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "F",
+     "title": "Inspect: the debugger",
+     "rungs": [
+      {
+       "id": "s04-r10",
+       "n": "10",
+       "title": "Stop the program and look",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-10--stop-the-program-and-look",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "title": "The catalogue, as functions",
+     "rungs": [
+      {
+       "id": "s04-r11",
+       "n": "11",
+       "title": "Mini-project: the catalogue, tested",
+       "minutes": 120,
+       "has_check": false,
+       "anchor": "rung-11--mini-project-the-catalogue-tested",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 11,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Structure"
+  },
+  {
+   "id": "s05",
+   "name": "Errors and files",
+   "tier": "B",
+   "hours": 14,
+   "build": "outline",
+   "learner": "locked",
+   "note": "Fixture arrives as files; the four broken files are gate cases.",
+   "brief": "stages/05-errors-and-files/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Exceptions",
+     "rungs": [
+      {
+       "id": "s05-r1",
+       "n": "1",
+       "title": "`try`, `except`, `else`, `finally`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-1--try-except-else-finally",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s05-r2",
+       "n": "2",
+       "title": "`raise`, custom exceptions, the hierarchy",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-2--raise-custom-exceptions-the-hierarchy",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s05-r3",
+       "n": "3",
+       "title": "Reading a long traceback",
+       "minutes": 40,
+       "has_check": false,
+       "anchor": "rung-3--reading-a-long-traceback",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Files",
+     "rungs": [
+      {
+       "id": "s05-r4",
+       "n": "4",
+       "title": "`with`, `pathlib`, text and encoding",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-4--with-pathlib-text-and-encoding",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s05-r5",
+       "n": "5",
+       "title": "CSV",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-5--csv",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s05-r6",
+       "n": "6",
+       "title": "JSON",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-6--json",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s05-r7",
+       "n": "7",
+       "title": "`pickle`: once, properly",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-7--pickle-once-properly",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Time and the command line",
+     "rungs": [
+      {
+       "id": "s05-r8",
+       "n": "8",
+       "title": "Dates",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-8--dates",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s05-r9",
+       "n": "9",
+       "title": "`argparse` and the environment",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-9--argparse-and-the-environment",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Inspect: logging",
+     "rungs": [
+      {
+       "id": "s05-r10",
+       "n": "10",
+       "title": "`logging` instead of `print`",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-10--logging-instead-of-print",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "The loans report",
+     "rungs": [
+      {
+       "id": "s05-r11",
+       "n": "11",
+       "title": "Mini-project: the loans report",
+       "minutes": 130,
+       "has_check": false,
+       "anchor": "rung-11--mini-project-the-loans-report",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 11,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Structure"
+  },
+  {
+   "id": "s06",
+   "name": "Modules and tooling",
+   "tier": "B",
+   "hours": 12,
+   "build": "outline",
+   "learner": "locked",
+   "note": "Learner writes tests from r8; mutation check in just eval 06 is new harness work.",
+   "brief": "stages/06-modules-and-tooling/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Modules",
+     "rungs": [
+      {
+       "id": "s06-r1",
+       "n": "1",
+       "title": "`import`, and a module of your own",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-1--import-and-a-module-of-your-own",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s06-r2",
+       "n": "2",
+       "title": "A package",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-2--a-package",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "The standard-library tour",
+     "rungs": [
+      {
+       "id": "s06-r3",
+       "n": "3",
+       "title": "`collections`, `itertools`, `functools`",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-3--collections-itertools-functools",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s06-r4",
+       "n": "4",
+       "title": "`re`, `os`, `shutil`, `time`, and the rest",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-4--re-os-shutil-time-and-the-rest",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Packages",
+     "rungs": [
+      {
+       "id": "s06-r5",
+       "n": "5",
+       "title": "Virtual environments, `uv add`, `pyproject.toml`",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-5--virtual-environments-uv-add-pyprojecttoml",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s06-r6",
+       "n": "6",
+       "title": "The public API",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-6--the-public-api",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s06-r7",
+       "n": "7",
+       "title": "A table on the terminal",
+       "minutes": 40,
+       "has_check": false,
+       "anchor": "rung-7--a-table-on-the-terminal",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Your own tests",
+     "rungs": [
+      {
+       "id": "s06-r8",
+       "n": "8",
+       "title": "Writing tests",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-8--writing-tests",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s06-r9",
+       "n": "9",
+       "title": "Fixtures, `tmp_path`, and the planted bug",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-9--fixtures-tmp_path-and-the-planted-bug",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "The library package",
+     "rungs": [
+      {
+       "id": "s06-r10",
+       "n": "10",
+       "title": "Mini-project: the library package",
+       "minutes": 110,
+       "has_check": false,
+       "anchor": "rung-10--mini-project-the-library-package",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 10,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Structure"
+  },
+  {
+   "id": "s07",
+   "name": "Classes and objects",
+   "tier": "C",
+   "hours": 12,
+   "build": "outline",
+   "learner": "locked",
+   "note": "First required ADR; AI review of own code allowed from here.",
+   "brief": "stages/07-classes-and-objects/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "A first class",
+     "rungs": [
+      {
+       "id": "s07-r1",
+       "n": "1",
+       "title": "Why, `class`, `__init__`, `self`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-1--why-class-__init__-self",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s07-r2",
+       "n": "2",
+       "title": "Methods, `__repr__`, `__str__`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-2--methods-__repr__-__str__",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Attributes",
+     "rungs": [
+      {
+       "id": "s07-r3",
+       "n": "3",
+       "title": "Class vs instance attributes",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-3--class-vs-instance-attributes",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s07-r4",
+       "n": "4",
+       "title": "`@property`",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-4--property",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s07-r5",
+       "n": "5",
+       "title": "`@classmethod` and `@staticmethod`",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-5--classmethod-and-staticmethod",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Equality",
+     "rungs": [
+      {
+       "id": "s07-r6",
+       "n": "6",
+       "title": "`__eq__` and `__hash__`",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-6--__eq__-and-__hash__",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Records",
+     "rungs": [
+      {
+       "id": "s07-r7",
+       "n": "7",
+       "title": "`@dataclass`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-7--dataclass",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s07-r8",
+       "n": "8",
+       "title": "`Enum`",
+       "minutes": 30,
+       "has_check": false,
+       "anchor": "rung-8--enum",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "The library, as objects",
+     "rungs": [
+      {
+       "id": "s07-r9",
+       "n": "9",
+       "title": "Mini-project: `Book`, `Member`, `Loan`, `Library`",
+       "minutes": 120,
+       "has_check": false,
+       "anchor": "rung-9--mini-project-book-member-loan-library",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 9,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Objects"
+  },
+  {
+   "id": "s08",
+   "name": "Design and the data model",
+   "tier": "C",
+   "hours": 14,
+   "build": "outline",
+   "learner": "locked",
+   "note": "Comparison memo; context managers as author.",
+   "brief": "stages/08-design-and-the-data-model/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Relationships",
+     "rungs": [
+      {
+       "id": "s08-r1",
+       "n": "1",
+       "title": "Inheritance and `super()`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-1--inheritance-and-super",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s08-r2",
+       "n": "2",
+       "title": "Duck typing, ABCs, `Protocol`",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-2--duck-typing-abcs-protocol",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s08-r3",
+       "n": "3",
+       "title": "Composition over inheritance: the memo",
+       "minutes": 80,
+       "has_check": false,
+       "anchor": "rung-3--composition-over-inheritance-the-memo",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "The data model",
+     "rungs": [
+      {
+       "id": "s08-r4",
+       "n": "4",
+       "title": "`__len__`, `__getitem__`, `__contains__`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-4--__len__-__getitem__-__contains__",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s08-r5",
+       "n": "5",
+       "title": "Operators, `__call__`, `__bool__`",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-5--operators-__call__-__bool__",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Iteration",
+     "rungs": [
+      {
+       "id": "s08-r6",
+       "n": "6",
+       "title": "Iterators and iterables",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-6--iterators-and-iterables",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s08-r7",
+       "n": "7",
+       "title": "Generators and lazy pipelines",
+       "minutes": 70,
+       "has_check": false,
+       "anchor": "rung-7--generators-and-lazy-pipelines",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Context managers as authors",
+     "rungs": [
+      {
+       "id": "s08-r8",
+       "n": "8",
+       "title": "`__enter__`/`__exit__` and `@contextmanager`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-8--__enter____exit__-and-contextmanager",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "The library, as a Python object",
+     "rungs": [
+      {
+       "id": "s08-r9",
+       "n": "9",
+       "title": "Mini-project: a `Library` that behaves like Python",
+       "minutes": 120,
+       "has_check": false,
+       "anchor": "rung-9--mini-project-a-library-that-behaves-like-python",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 9,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Objects"
+  },
+  {
+   "id": "s09",
+   "name": "Writing Python well",
+   "tier": "D",
+   "hours": 14,
+   "build": "outline",
+   "learner": "locked",
+   "note": "Three fixtures to build: 200-line script, stranger's PR branch, twelve-bug package.",
+   "brief": "stages/09-writing-python-well/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Style and idiom",
+     "rungs": [
+      {
+       "id": "s09-r1",
+       "n": "1",
+       "title": "`ruff format` and PEP 8",
+       "minutes": 40,
+       "has_check": false,
+       "anchor": "rung-1--ruff-format-and-pep-8",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s09-r2",
+       "n": "2",
+       "title": "Idioms",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-2--idioms",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Types",
+     "rungs": [
+      {
+       "id": "s09-r3",
+       "n": "3",
+       "title": "Typing in depth and `mypy --strict`",
+       "minutes": 80,
+       "has_check": false,
+       "anchor": "rung-3--typing-in-depth-and-mypy---strict",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Tests in depth",
+     "rungs": [
+      {
+       "id": "s09-r4",
+       "n": "4",
+       "title": "Fixtures, `parametrize`, `tmp_path`, `monkeypatch`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-4--fixtures-parametrize-tmp_path-monkeypatch",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s09-r5",
+       "n": "5",
+       "title": "Coverage",
+       "minutes": 40,
+       "has_check": false,
+       "anchor": "rung-5--coverage",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Measure",
+     "rungs": [
+      {
+       "id": "s09-r6",
+       "n": "6",
+       "title": "`timeit` and the profiler",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-6--timeit-and-the-profiler",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s09-r7",
+       "n": "7",
+       "title": "Choosing structures with numbers",
+       "minutes": 50,
+       "has_check": false,
+       "anchor": "rung-7--choosing-structures-with-numbers",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "Refactor",
+     "rungs": [
+      {
+       "id": "s09-r8",
+       "n": "8",
+       "title": "The 200-line script",
+       "minutes": 90,
+       "has_check": false,
+       "anchor": "rung-8--the-200-line-script",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "F",
+     "title": "Read",
+     "rungs": [
+      {
+       "id": "s09-r9",
+       "n": "9",
+       "title": "A standard-library module",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-9--a-standard-library-module",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s09-r10",
+       "n": "10",
+       "title": "A stranger's pull request",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-10--a-strangers-pull-request",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "title": "The planted-bug hunt",
+     "rungs": [
+      {
+       "id": "s09-r11",
+       "n": "11",
+       "title": "Mini-project: twelve bugs",
+       "minutes": 120,
+       "has_check": false,
+       "anchor": "rung-11--mini-project-twelve-bugs",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 11,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Craft"
+  },
+  {
+   "id": "s10",
+   "name": "Capstone",
+   "tier": "D",
+   "hours": 20,
+   "build": "outline",
+   "learner": "locked",
+   "note": "Break-my-program, teach-back, hand-off to the sibling courses.",
+   "brief": "stages/10-capstone/README.md",
+   "parts": [
+    {
+     "id": "A",
+     "title": "Plan",
+     "rungs": [
+      {
+       "id": "s10-r1",
+       "n": "1",
+       "title": "The failure review",
+       "minutes": 90,
+       "has_check": false,
+       "anchor": "rung-1--the-failure-review",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s10-r2",
+       "n": "2",
+       "title": "Skeleton and `pyproject.toml`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-2--skeleton-and-pyprojecttoml",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "title": "Build",
+     "rungs": [
+      {
+       "id": "s10-r3",
+       "n": "3",
+       "title": "Domain and persistence",
+       "minutes": 150,
+       "has_check": false,
+       "anchor": "rung-3--domain-and-persistence",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s10-r4",
+       "n": "4",
+       "title": "Sub-commands",
+       "minutes": 120,
+       "has_check": false,
+       "anchor": "rung-4--sub-commands",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s10-r5",
+       "n": "5",
+       "title": "`search`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-5--search",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s10-r6",
+       "n": "6",
+       "title": "Logging and errors",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-6--logging-and-errors",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "title": "Craft",
+     "rungs": [
+      {
+       "id": "s10-r7",
+       "n": "7",
+       "title": "Tests, coverage, types",
+       "minutes": 120,
+       "has_check": false,
+       "anchor": "rung-7--tests-coverage-types",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "title": "Ship",
+     "rungs": [
+      {
+       "id": "s10-r8",
+       "n": "8",
+       "title": "README and `uv build`",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-8--readme-and-uv-build",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "title": "Review",
+     "rungs": [
+      {
+       "id": "s10-r9",
+       "n": "9",
+       "title": "Break my program, and the post-mortem",
+       "minutes": 150,
+       "has_check": false,
+       "anchor": "rung-9--break-my-program-and-the-post-mortem",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s10-r10",
+       "n": "10",
+       "title": "Teach-back",
+       "minutes": 60,
+       "has_check": false,
+       "anchor": "rung-10--teach-back",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      },
+      {
+       "id": "s10-r11",
+       "n": "11",
+       "title": "The hand-off",
+       "minutes": 45,
+       "has_check": false,
+       "anchor": "rung-11--the-hand-off",
+       "done": false,
+       "run": false,
+       "see": false,
+       "say": false,
+       "minutes_spent": "",
+       "current": false
+      }
+     ]
+    }
+   ],
+   "rungs_total": 11,
+   "rungs_done": 0,
+   "fraction": 0.0,
+   "learner_label": "Locked",
+   "build_label": "outline",
+   "tier_name": "Craft"
+  }
+ ],
+ "current": {
+  "stage": "s00",
+  "stage_name": "Hello Python",
+  "rung": {
+   "id": "s00-r0",
+   "n": "0",
+   "title": "Install Python and the editor",
+   "minutes": 25,
+   "has_check": true,
+   "anchor": "rung-0--install-python-and-the-editor",
+   "done": false,
+   "run": false,
+   "see": false,
+   "say": false,
+   "minutes_spent": "",
+   "current": true
+  }
+ },
+ "hours_total": 140,
+ "hours_done": 0,
+ "stages_passed": 0,
+ "maintainer_queue": [
+  {
+   "when": "on s00 feedback",
+   "task": "Classify feedback items; apply rung changes to s00; cascade to s01 Assumes; log in REVISIONS.md. Run s00 on Windows on a machine without Python."
+  },
+  {
+   "when": "before s01 unlock",
+   "task": "Run every s01 code block on the pins (both platforms for r0); confirm the 57-red / `-k r1e` counts match the brief; mark s01 verified."
+  },
+  {
+   "when": "before s02 unlock",
+   "task": "Run every s02 code block on the pins; verify the GitHub fork, Pages and PR steps end to end on a fresh account; mark s02 verified."
+  },
+  {
+   "when": "while learner in s02",
+   "task": "Rung-number s03 with s00–s02 feedback: exercises with embedded fixture literals, hidden cases, solutions, break-lab, rubric anchors; reconcile threshold; `just progress`."
+  },
+  {
+   "when": "before s04 readiness",
+   "task": "Extend course/runner.py and conftest for function-stub exercises (import and call); provide the debugger rung's buggy program."
+  },
+  {
+   "when": "before s06 readiness",
+   "task": "Mutation check in scripts/eval.py; confirm the public API still returns the three fields (PINS.md step 6)."
+  },
+  {
+   "when": "before s09 readiness",
+   "task": "Build the 200-line script, the stranger's PR branch in upstream, and the twelve-bug package with its answer key outside the learner path; decide pre-commit rung vs stretch."
+  },
+  {
+   "when": "before s10 readiness",
+   "task": "Confirm the sibling course's Stage 0 Contract is stable; capstone hidden cases as subprocess runs on the fixture and broken files."
+  }
+ ],
+ "activity": [
+  {
+   "date": "2026-11-04",
+   "event": "v0.5: board.json, PROGRESS.md generated from the briefs, BOARD.md and README block rendered, course player published on Pages."
+  },
+  {
+   "date": "2026-11-04",
+   "event": "v0.4: stages 0–2 rung-numbered with Checks, exercises, visible and hidden tests, solutions and break-labs; stages 3–10 outlined with binding Contracts and Gate IDs."
+  },
+  {
+   "date": "2026-11-04",
+   "event": "v0.3: docs/01–17, domain templates (FAILURE_REVIEW, BREAK_MY_PROGRAM, PROJECT_README), AGENTS.md, CONTRIBUTING.md, CHANGELOG.md, LEDGER.md (hours)."
+  },
+  {
+   "date": "2026-11-04",
+   "event": "v0.2: course player, scripts and workflows copied verbatim from the reference course; PINS.md verified live; deterministic library fixture; eval harness."
+  },
+  {
+   "date": "2026-11-04",
+   "event": "v0.1: CONTEXT.md, intent, ADR-001..004, repository created."
+  }
+ ],
+ "progress_file": true
+}

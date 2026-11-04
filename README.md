@@ -5,6 +5,26 @@
 This repository is a complete, evidence-based curriculum for learning Python as a professional would use it. It is ten stages long, each stage ends in a working program with tests and a measurable gate, and the whole thing is designed around one conviction: the scarce skill is not knowing the syntax, it is **fluency with judgment** — writing idiomatic Python without thinking, reading the error when it fails, seeing inside it when it is quietly wrong, and knowing when not to write code at all.
 
 <!-- board:start -->
+## Where you are
+
+**Stage 0 · Rung 0 — Install Python and the editor** · ~25 min  
+[Open the rung](stages/00-hello-python/README.md#rung-0--install-python-and-the-editor) · 0 of 8 rungs done in this stage
+
+| | Stage | Tier | Progress |
+|---|---|---|---|
+| ▶ | **[0 · Hello Python](stages/00-hello-python/README.md)** ← you are here | A | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🟢 | [1 · Values and names](stages/01-values-and-names/README.md) | A | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [2 · Decisions and repetition](stages/02-decisions-and-repetition/README.md) | A | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [3 · Collections](stages/03-collections/README.md) | A | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [4 · Functions](stages/04-functions/README.md) | B | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [5 · Errors and files](stages/05-errors-and-files/README.md) | B | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [6 · Modules and tooling](stages/06-modules-and-tooling/README.md) | B | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [7 · Classes and objects](stages/07-classes-and-objects/README.md) | C | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [8 · Design and the data model](stages/08-design-and-the-data-model/README.md) | C | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [9 · Writing Python well](stages/09-writing-python-well/README.md) | D | `▱▱▱▱▱▱▱▱▱▱` 0% |
+| 🔒 | [10 · Capstone](stages/10-capstone/README.md) | D | `▱▱▱▱▱▱▱▱▱▱` 0% |
+
+Full outline with the rung checklist for the current stage: [BOARD.md](BOARD.md). Course player (left pane: stages, parts, rungs and your progress; right pane: the brief): [wvlt.github.io/python-developer-101](https://wvlt.github.io/python-developer-101/) or `just site` locally.
 <!-- board:end -->
 
 ## Who this is for

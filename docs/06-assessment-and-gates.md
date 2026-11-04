@@ -26,7 +26,7 @@ and prints the same as a table. Run it as often as you like; every run is a dire
 
 **What "hidden" means.** The tests are in the repository; a public course cannot hide a file. The harness prints case IDs and counts, not assertions, and the convention is that you do not open `eval/` before the gate. The course relies on your interest in your own fluency, and on the Say questions, which cannot be looked up. If you open the hidden tests, the number on your card is not a measurement.
 
-**Thresholds** are "≥ N of M", set so that one exercise can be entirely wrong and the stage still passes, but two cannot. They are in each brief's Gate and in `eval/threshold.json`; changing N or M is a stage change (ADR).
+**Thresholds** are "≥ N of M" at about 90 %, so that two or three exercises can be entirely wrong and the stage still passes, but more cannot. They are in each brief's Gate and in `eval/threshold.json`; changing N or M is a stage change (ADR).
 
 ## The universal gate checklist
 
@@ -47,9 +47,9 @@ Every stage from 1, in addition to its specific criteria:
 
 Restated from the briefs with the reviewer's check in brackets. The exact IDs (`sNN-gK`) are in each brief.
 
-**Stage 1** — ≥ 44/49 hidden [run `just eval 01`]; three Say questions from r1, r4, r7 [ask]; ≥ 5 commits [`git log --oneline`]; receipt formatter's output aligned to the column widths in the brief [run it].
+**Stage 1** — ≥ 57/63 hidden [run `just eval 01`]; three Say questions from r1, r4, r7 [ask]; ≥ 5 commits [`git log --oneline`]; receipt formatter's output aligned to the column widths in the brief [run it].
 
-**Stage 2** — ≥ 50/56 hidden; `ruff check` clean; fork on GitHub with ≥ 8 commits and Pages or `just site` showing `PROGRESS.md`; the game validates every input (reviewer types letters where numbers are expected); three Say questions.
+**Stage 2** — ≥ 56/62 hidden; `ruff check` clean; fork on GitHub with ≥ 8 commits and Pages or `just site` showing `PROGRESS.md`; the game validates every input (reviewer types letters where numbers are expected); three Say questions.
 
 **Stage 3** — ≥ 54/60 hidden on a held-out sample; aliasing Say question answered with a drawing or the sentence "two names, one object"; the catalogue answers the five questions in the brief on the held-out sample [reviewer runs it].
 

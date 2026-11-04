@@ -60,7 +60,7 @@ Stage 0 is ungated; the rubric is applied by the learner to themselves. Build: a
 ### Anchors, stage 1
 
 - Build — Pass: every exercise r1e1–r9e1 passes its visible tests; the receipt program runs from the terminal on the brief's input and prints the aligned columns. Strong: the receipt handles a quantity of zero without being asked.
-- Measure — Pass: ≥ 44/49 hidden; the run directory is cited in the card; the learner can say what one failing visible test told them. Strong: a visible test was read *before* the exercise was attempted and the learner says so.
+- Measure — Pass: ≥ 57/63 hidden; the run directory is cited in the card; the learner can say what one failing visible test told them. Strong: a visible test was read *before* the exercise was attempted and the learner says so.
 - Break — Pass: the break-lab's six predictions written before running, with at least two wrong and corrected; `0.1 + 0.2`, `7 // 2`, `"9" > "10"` each named in the journal. Strong: a seventh snippet of the learner's own that surprised them.
 - Inspect — Pass: `f"{x=}"` used to find a wrong value in at least one exercise, and the journal says which. Strong: `just trace` used on the receipt and one line of its output quoted in the journal.
 - Judgment — Pass: the kill criterion answered for the receipt (a calculator would do for one receipt; the program earns its place at ten). Strong: the learner names the input on which the program is wrong and a spreadsheet is not.
@@ -69,7 +69,7 @@ Stage 0 is ungated; the rubric is applied by the learner to themselves. Build: a
 ### Anchors, stage 2
 
 - Build — Pass: every exercise passes; the text game runs; every `input()` in it is validated in a loop; `ruff check` clean. Strong: the game's state is a small number of named variables and the learner can draw the loop on paper.
-- Measure — Pass: ≥ 50/56 hidden; the reviewer's malformed inputs produce a message, not a traceback. Strong: the learner wrote down three inputs they expected to break it *before* the reviewer tried.
+- Measure — Pass: ≥ 56/62 hidden; the reviewer's malformed inputs produce a message, not a traceback. Strong: the learner wrote down three inputs they expected to break it *before* the reviewer tried.
 - Break — Pass: the always-true `or` (F03) and the off-by-one (F01) each met in the break-lab and named; the planted bug in r11 found and the fix journaled with the line. Strong: the shadowed built-in (F04) found by `ruff` and explained in the learner's words.
 - Inspect — Pass: an f-string print placed inside a loop to watch a value change, and the journal says what it showed. Strong: `just trace` output read to find an infinite loop's cause.
 - Judgment — Pass: says which of the mini-project's rules could be a table (dict) instead of a chain of `elif`. Strong: did it.

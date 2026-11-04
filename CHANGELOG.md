@@ -2,6 +2,17 @@
 
 Semantic versioning per [11 — Curriculum maintenance](docs/11-curriculum-maintenance.md): major = stage structure; minor = substantive rung, gate, convention or pin-policy change, a stage rung-numbered; patch = pins, reading-list swaps, bestiary additions, fixes.
 
+## [0.4.0] — 2026-11-04
+
+The briefs.
+
+- **Stage 0** rung-numbered: eight rungs in three parts (the machine; one change at a time; the habit), each with a Run/See/Say Check, both platforms at every terminal step, three deliberate failures with their bestiary IDs, `input()` inside `print()` so no name is bound before stage 1, a paper break-lab, a done-when list in place of a gate.
+- **Stage 1** rung-numbered: ten rungs (toolchain and clone; arithmetic; types and conversions; names; strings; string methods; f-strings and `f"{x=}"`; truth, `None`, `is` vs `==`; git save points; the receipt). 29 exercises as whole programs over `input()`/`print()`, 57 visible tests, 63 hidden cases (threshold 57), eight break-lab snippets, reference solutions; gate `s01-g1`–`g4`.
+- **Stage 2** rung-numbered: eleven rungs (`if`/`else`; `elif` and the conditional expression; `match`; `while` and ask-until-valid; `for`/`range`; `break`/`continue`/`else`; `enumerate`/`zip`; accumulators, flags, nesting; `ruff` with a planted bug carrying one loud and one quiet fault; GitHub fork, branch, PR; guess-the-number). 26 exercises, 54 visible, 62 hidden (threshold 56), nine break-lab snippets; gate `s02-g1`–`g5`.
+- **Stages 3–10** at outline level: parts and planned rungs with time estimates and rung IDs, binding Contracts, Break-lab targets by bestiary ID, Gate IDs with thresholds, kill criteria, stretch, reading; each `REVISIONS.md` states the outline status and the open items for rung-numbering.
+- Harness: `just test NN -k rMe` filters by rung (visible test ids are `rMeK-a`); `--tb=short` for beginner-readable failures; `ruff` rule set `A` enabled for shadowed built-ins; long header comments in exercises exempt from E501; `.python-version` pins the minor for `uv`.
+- Thresholds in docs/01, docs/06, docs/14 and the progress template reconciled with the authored counts (s01 57/63; s02 56/62); the threshold rule restated as "about 90 %".
+
 ## [0.3.0] — 2026-11-04
 
 Curriculum documents, templates and the maintainer surface.

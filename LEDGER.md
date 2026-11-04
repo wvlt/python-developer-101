@@ -1,6 +1,6 @@
 # LEDGER.md — hours
 
-This course costs no money. It costs time, and time is the number worth writing down: the budget per stage is in [01 — Syllabus](docs/01-syllabus.md#time-budget), and the gap between budget and actual is the most useful feedback you can give the curriculum. Update at the end of every session, not from memory.
+This course costs no money. It costs time, and time is the number worth writing down: the budget per stage is in [01 — Syllabus](docs/01-syllabus.md#time-budget-summary), and the gap between budget and actual is the most useful feedback you can give the curriculum. Update at the end of every session, not from memory.
 
 | Stage | Budget (h) | Sessions | Actual (h) | Of which stalled (h) | Notes |
 |---|---|---|---|---|---|

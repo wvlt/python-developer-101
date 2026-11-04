@@ -28,9 +28,9 @@ data:
 # ---- the standard targets --------------------------------------------------
 
 # Visible tests for a stage: the ones each rung tells you to run.
-test stage="":
+test stage="" *flags:
     @s="{{stage}}"; [ -n "$s" ] || s=$(just _current); d=$(just _dir $s); \
-    if [ -d "$d/tests" ]; then uv run pytest "$d/tests" --import-mode=importlib -q -p no:cacheprovider; \
+    if [ -d "$d/tests" ]; then uv run pytest "$d/tests" --import-mode=importlib {{flags}}; \
     else echo "stage $s: no tests/ (stage 0 has no tests; it has a Done-when list)"; fi
 
 # The eval harness: hidden tests for a stage; writes eval/runs/<timestamp>-<sha>/summary.json and prints the verdict.

@@ -19,8 +19,8 @@ Copied from each gate review.
 | Stage | Date | Verdict | Hidden (passed/of) | Build | Measure | Break | Inspect | Judgment | Communication | Hours (actual / budget) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 0 | | self | — | | — | | | — | | / 2 |
-| 1 | | | / 49 | | | | | | | / 12 |
-| 2 | | | / 56 | | | | | | | / 12 |
+| 1 | | | / 63 | | | | | | | / 12 |
+| 2 | | | / 62 | | | | | | | / 12 |
 | 3 | | | / 60 | | | | | | | / 14 |
 | 4 | | | / 60 | | | | | | | / 14 |
 | 5 | | | / 60 | | | | | | | / 14 |

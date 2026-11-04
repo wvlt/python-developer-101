@@ -47,7 +47,7 @@ No tests, no git, no artefact, no gate. The Done-when list is six things you can
 
 **Artefact:** a receipt formatter: reads a name, a price and a quantity, prints an aligned receipt with a total, a tax line and a thank-you.
 
-**Gate:** ≥ 44 of 49 hidden tests pass; three Say questions answered without notes; git log shows ≥ 5 commits with messages that say what changed.
+**Gate:** ≥ 57 of 63 hidden tests pass; three Say questions answered without notes; git log shows ≥ 5 commits with messages that say what changed.
 
 **Kill criteria:** if a calculator or a spreadsheet cell does it once, do not write a program.
 
@@ -69,7 +69,7 @@ No tests, no git, no artefact, no gate. The Done-when list is six things you can
 
 **Artefact:** a text game (number guessing with a guess limit and hints, then hangman-lite) that loops until win or loss and validates every input.
 
-**Gate:** ≥ 50 of 56 hidden tests pass; `ruff check` clean on `exercises/`; the fork is on GitHub with ≥ 8 commits; three Say questions.
+**Gate:** ≥ 56 of 62 hidden tests pass; `ruff check` clean on `exercises/`; the fork is on GitHub with ≥ 8 commits; three Say questions.
 
 **Kill criteria:** if the decision table has three rows and will never change, write the three rows down, not the program.
 
@@ -241,7 +241,7 @@ Tier D is about doing it well, reading it when others did it, and knowing when n
 
 **Failure review:** before building, a [`FAILURE_REVIEW.md`](../templates/FAILURE_REVIEW.md): where could this program be quietly wrong, and which test or structure prevents each.
 
-**Break-my-program:** a peer runs the [protocol](10-instructor-guide.md#the-break-my-program-protocol) against your program for an hour; you fix every finding with a test and write the [post-mortem](../templates/POSTMORTEM.md).
+**Break-my-program:** a peer runs the [protocol](10-instructor-guide.md#break-my-program-protocol) against your program for an hour; you fix every finding with a test and write the [post-mortem](../templates/POSTMORTEM.md).
 
 **Teach-back:** explain one concept from each tier to a non-programmer, in five minutes each, with a running example and a deliberate mistake.
 

@@ -3,6 +3,7 @@
 Each row is (exercise file, what is typed in, what must be printed). Read the rows before you start an
 exercise; they are the examples. `just test 01 -k r4e` runs only rung 4's exercises.
 """
+
 import pytest
 
 CASES = [
@@ -62,7 +63,12 @@ CASES = [
     pytest.param("r7e3_truth_of_text", "0\n", "True\nFalse", id="r7e3-b"),
     pytest.param("r7e4_same_ignoring_case", "Hello\nhello\n", "False\nTrue", id="r7e4-a"),
     pytest.param("r7e4_same_ignoring_case", "x\ny\n", "False\nFalse", id="r7e4-b"),
-    pytest.param("r9e1_receipt", "apple\n3\n0.5\nbread\n1\n3.2\nmilk\n2\n1.25\n", "Item      Qty   Price\napple       3    1.50\nbread       1    3.20\nmilk        2    2.50\n---------------------\nTOTAL            7.20", id="r9e1-a"),
+    pytest.param(
+        "r9e1_receipt",
+        "apple\n3\n0.5\nbread\n1\n3.2\nmilk\n2\n1.25\n",
+        "Item      Qty   Price\napple       3    1.50\nbread       1    3.20\nmilk        2    2.50\n---------------------\nTOTAL            7.20",
+        id="r9e1-a",
+    ),
 ]
 
 

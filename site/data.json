@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-04",
- "curriculum_version": "v0.5.0",
+ "curriculum_version": "v1.0.0",
  "learner": "first learner",
  "course": {
   "title": "Python Developer",
@@ -28,9 +28,9 @@
    "name": "Hello Python",
    "tier": "A",
    "hours": 2,
-   "build": "rung_numbered",
+   "build": "verified",
    "learner": "in_progress",
-   "note": "Ungated. Eight rungs with Checks; reference run against the pins recorded at v1.0.0.",
+   "note": "Ungated. Every code block run on macOS against the 3.13 interpreter in PINS.md (Reference runs) on 2026-11-04; three rung changes; Windows run before the first Windows learner.",
    "brief": "stages/00-hello-python/README.md",
    "parts": [
     {
@@ -168,7 +168,7 @@
    "rungs_done": 0,
    "fraction": 0.0,
    "learner_label": "In progress",
-   "build_label": "rung-numbered",
+   "build_label": "verified",
    "tier_name": "Talking to the machine"
   },
   {
@@ -2188,6 +2188,10 @@
   }
  ],
  "activity": [
+  {
+   "date": "2026-11-04",
+   "event": "v1.0.0: Stage 0 reference run (22 blocks, 3 brief changes); learner read-through of stages 0–2 (isdigit added to s01-r5; s02 first-run count corrected); identifier grep, link check and board check green; tagged."
+  },
   {
    "date": "2026-11-04",
    "event": "v0.5: board.json, PROGRESS.md generated from the briefs, BOARD.md and README block rendered, course player published on Pages."

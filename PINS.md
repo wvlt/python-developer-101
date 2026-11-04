@@ -66,6 +66,15 @@ Chosen because it fits the library-world fixture, needs no account, and returns 
 
 Used from stage 3; the capstone persists to it. No external dataset anywhere in the course.
 
+## Reference runs
+
+The exact interpreter each stage's code blocks were last executed on. Briefs and `REVISIONS.md` refer to this table rather than naming a patch version.
+
+| Date | Stage | Platform | Interpreter | Pin at the time | Result |
+|---|---|---|---|---|---|
+| 2026-11-04 | s00 | macOS 15, Apple silicon | CPython **3.13.1** (system package manager; the pinned installer was not run on the maintainer's machine) | 3.13.17 | 22 blocks; 19 matched, 3 brief changes (`stages/00-hello-python/REVISIONS.md`). Error messages and `print`/`input` behaviour are identical across 3.13 patch releases; re-run on the pinned installer and on Windows before the first Windows learner. |
+| 2026-11-04 | s01, s02 | macOS 15 | CPython **3.13.1** | 3.13.17 | Prompt examples evaluated and visible-test counts confirmed (`REVISIONS.md` of each stage); full by-hand run pending at stage verification. |
+
 ## Deprecation log
 
 | Date | What changed | Why | Reference run before → after |

@@ -63,6 +63,7 @@ Fixed order, fixed headings, so a learner always knows where they are:
 5. **Idiomatic for the stage.** Code in stage 2 uses no functions; code in stage 4 uses no classes. The brief models the Python the learner can write at that point, not the Python the author would write.
 6. **Conventions modelled.** From the rung that introduces them: type hints and docstrings from s04; `with` and `encoding` from s05; tests alongside code from s06.
 7. **Comments explain intent, not syntax.**
+8. **Plain punctuation inside code.** No em dashes, curly quotes or other non-keyboard characters inside a code block, including in comments: when a learner removes a `#` or a quote on purpose, the error must be about what they removed, not `invalid character '—' (U+2014)`. (Found in the stage 0 reference run.)
 
 ## Exercises
 

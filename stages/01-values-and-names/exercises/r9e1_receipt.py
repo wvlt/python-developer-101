@@ -1,7 +1,7 @@
-# r9e1 — receipt (mini-project)
+# r9e1 - receipt (mini-project)
 # Three items. For each: a name, a quantity (whole), a unit price (decimal), one per line; nine lines in all.
 # Print a receipt:
-#   a header line:  'Item      Qty   Price' (Item left in 10, Qty right in 3, Price right in 8 — exactly as r6e3)
+#   a header line:  'Item      Qty   Price' (Item left in 10, Qty right in 3, Price right in 8, exactly as r6e3)
 #   one line per item, formatted as in r6e3, where Price is quantity times unit price
 #   a line of 21 '-' characters
 #   a last line with 'TOTAL' left-aligned in 13 characters and the total right-aligned in 8 with two decimals.

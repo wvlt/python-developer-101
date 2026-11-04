@@ -1,4 +1,4 @@
-# r11e1 — guess the number (mini-project)
+# r11e1 - guess the number (mini-project)
 # The first line is the secret number (1 to 100). Then guesses arrive one per line.
 # For each guess:
 #   not digits                 -> print 'numbers only'

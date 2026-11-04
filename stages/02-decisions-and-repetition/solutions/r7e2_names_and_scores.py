@@ -1,4 +1,4 @@
-# r7e2 — names and scores
+# r7e2 - names and scores
 # A whole number n, then n names, then n scores (whole numbers). Print each name with its score, like:  Ada: 90
 # Use zip.
 # Example: 2, Ada, Bob, 90, 75 -> prints Ada: 90 / Bob: 75

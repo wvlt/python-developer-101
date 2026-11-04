@@ -82,7 +82,7 @@ Python has its own prompt, where you type one line and it answers at once. In th
 python3
 ```
 
-Three lines of text appear, then a new prompt: `>>>`. You are now talking to Python, not to the terminal. Type exactly this, including the quotes, and press Enter:
+Two lines of text appear (the version, then a line that starts `Type "help"`), then a new prompt: `>>>`. You are now talking to Python, not to the terminal. Type exactly this, including the quotes, and press Enter:
 
 ```
 >>> print("Hello, world")
@@ -233,10 +233,14 @@ A `SyntaxError` means Python could not even read the line: the text was opened w
 **Way 3 — add text to a number.** Change the line to `print("Hello" + 3)`. Run:
 
 ```
+Traceback (most recent call last):
+  File "/Users/ada/Desktop/hello/hello.py", line 1, in <module>
+    print("Hello" + 3)
+          ~~~~~~~~^~~
 TypeError: can only concatenate str (not "int") to str
 ```
 
-A `TypeError`: you asked Python to join text (`str`) and a whole number (`int`) with `+`, and `+` does not know how to do that. (It would work with `print("Hello", 3)`; the comma is `print` putting two things side by side, not adding them.) Fix it. (Bestiary [T01](../../docs/07-failure-bestiary.md#t--types-and-values).)
+A `TypeError`: you asked Python to join text (`str`) and a whole number (`int`) with `+`, and `+` does not know how to do that. The `~` and `^` marks under the line point at the two things and the `+` between them. (It would work with `print("Hello", 3)`; the comma is `print` putting two things side by side, not adding them.) Fix it. (Bestiary [T01](../../docs/07-failure-bestiary.md#t--types-and-values).)
 
 Check your break-lab guess for line 2 by running `print(Hello, world)`. Which of the three kinds is it? Read the last line and decide.
 
@@ -279,7 +283,7 @@ Everything you write from now on goes in one place, every file says at the top w
 **2.** New file: `day1.py`. First line is a **comment**: a line that starts with `#`, which Python ignores and people read. Then three lines of program:
 
 ```python
-# day1.py — the first things I made Python do
+# day1.py - the first things I made Python do
 print("Hello, world")
 print("2 + 3 is", 2 + 3)
 print("My name is", input("Name? "))
@@ -293,7 +297,7 @@ From now on, every program you write starts with a comment that says what it is,
 
 **Check**
 - **Run:** `python3 day1.py` from a terminal in `python-practice` → three lines, the last one containing your name.
-- **See:** what does the editor do to the colour of the comment line, and what happens to the output if you delete the `#`?
+- **See:** what does the editor do to the colour of the comment line, and what happens if you delete the `#` and run? (Read the last line; then put the `#` back.)
 - **Say:** three things every program of yours will have from now on.
 
 ## Done when

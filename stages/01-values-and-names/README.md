@@ -18,7 +18,7 @@ It is also the stage where the course's machinery arrives: someone else's tests 
 - You can name the type of a value with `type()` and convert between `int`, `float` and `str`; you know `input()` always gives text (`s01-r2`).
 - You can bind a name with `=`, update it with `+=`, and swap two names (`s01-r3`).
 - You can index, slice and measure text; you know text cannot be changed in place (`s01-r4`).
-- You can use `upper`, `lower`, `strip`, `title`, `count`, `replace`, `startswith`, `endswith` and look up the rest (`s01-r5`).
+- You can use `upper`, `lower`, `strip`, `title`, `count`, `replace`, `startswith`, `endswith`, `isdigit` and look up the rest (`s01-r5`).
 - You can build output with f-strings, including `:.2f`, `:<10`, `:>8`, and debug with `f"{x=}"` (`s01-r6`).
 - You can write a condition with `< <= == != >= >`, `and`, `or`, `not`; you know what is false in Python; you know `==` is not `is` (`s01-r7`).
 - You can make a git save point: `git status`, `git add`, `git commit -m`, `git log --oneline` (`s01-r8`).
@@ -335,13 +335,17 @@ A **method** is an operation that belongs to a value, called with a dot: `word.u
 True
 >>> "hello.py".startswith("h")
 True
+>>> "42".isdigit()
+True
+>>> "4.2".isdigit()
+False
 >>> "a,b,c".split(",")
 ['a', 'b', 'c']
 >>> "  x  ".strip() == "x"
 True
 ```
 
-Two things to notice. Methods can be chained (`name.strip().title()`): each returns a new string, and the next method is called on that. And `name` itself is unchanged after all of it; look at it again.
+`isdigit()` answers whether every character is a digit; stage 2 uses it to check an answer before calling `int()` on it. Two things to notice. Methods can be chained (`name.strip().title()`): each returns a new string, and the next method is called on that. And `name` itself is unchanged after all of it; look at it again.
 
 To see every method: `dir("")` at the prompt, or `help(str.strip)`. You are not expected to memorise them; you are expected to know they exist and to look.
 

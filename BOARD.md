@@ -1,4 +1,4 @@
-# Course — first learner · curriculum v0.5.0 · updated 2026-11-04
+# Course — first learner · curriculum v1.0.0 · updated 2026-11-04
 
 > Rendered by `scripts/render_board.py` from `status/board.json`, the stage briefs and `PROGRESS.md`. Do not edit by hand. Interactive version: open `site/` (see [Course player](#course-player)).
 
@@ -75,7 +75,7 @@ A rung is ticked when its Run, See and Say are all ☑ in [`PROGRESS.md`](PROGRE
 
 | Stage | Build | Learner | Note |
 |---|---|---|---|
-| **s00** Hello Python | rung-numbered | In progress | Ungated. Eight rungs with Checks; reference run against the pins recorded at v1.0.0. |
+| **s00** Hello Python | verified | In progress | Ungated. Every code block run on macOS against the 3.13 interpreter in PINS.md (Reference runs) on 2026-11-04; three rung changes; Windows run before the first Windows learner. |
 | **s01** Values and names | rung-numbered | Ready | 63 hidden cases, threshold 57; solutions green in CI. Verified when a maintainer runs every code block on the pins. |
 | **s02** Decisions and repetition | rung-numbered | Locked | 62 hidden cases, threshold 56; planted bug r9b1; GitHub at r10. |
 | **s03** Collections | outline | Locked | Rung-numbered while the learner is in s02; fixture literals generated from data/library/. |
@@ -100,6 +100,7 @@ Build states: *outline* (outcome, gate, contract fixed) → *rung-numbered* (eve
 | before s09 readiness | Build the 200-line script, the stranger's PR branch in upstream, and the twelve-bug package with its answer key outside the learner path; decide pre-commit rung vs stretch. |
 | before s10 readiness | Confirm the sibling course's Stage 0 Contract is stable; capstone hidden cases as subprocess runs on the fixture and broken files. |
 
+- **2026-11-04** — v1.0.0: Stage 0 reference run (22 blocks, 3 brief changes); learner read-through of stages 0–2 (isdigit added to s01-r5; s02 first-run count corrected); identifier grep, link check and board check green; tagged.
 - **2026-11-04** — v0.5: board.json, PROGRESS.md generated from the briefs, BOARD.md and README block rendered, course player published on Pages.
 - **2026-11-04** — v0.4: stages 0–2 rung-numbered with Checks, exercises, visible and hidden tests, solutions and break-labs; stages 3–10 outlined with binding Contracts and Gate IDs.
 - **2026-11-04** — v0.3: docs/01–17, domain templates (FAILURE_REVIEW, BREAK_MY_PROGRAM, PROJECT_README), AGENTS.md, CONTRIBUTING.md, CHANGELOG.md, LEDGER.md (hours).

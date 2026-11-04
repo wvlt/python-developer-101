@@ -28,7 +28,7 @@ Rung IDs: rung M here is `s02-rM`; its checks are `s02-rM.run`, `.see`, `.say`. 
 
 ## Entry condition
 
-Stage 1 gate passed (`just eval 01` PASS, card filled, commits in place). `just test 02` shows `54 failed`, every one `nothing written below the marker yet` except `r9b1`, which is a planted bug and fails differently.
+Stage 1 gate passed (`just eval 01` PASS, card filled, commits in place). `just test 02` shows `53 failed, 1 passed`: every failure says `nothing written below the marker yet` except one in `r9b1`, which is a planted bug and fails differently; the one pass is the other `r9b1` case, which the bug happens to get right.
 
 ## Break-lab (first)
 

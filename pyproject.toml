@@ -33,7 +33,7 @@ extend-exclude = ["stages/*/scratch"]
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "S", "A"]   # A = shadowed built-ins; S = bandit: flags eval(), pickle of untrusted data, bare except
 ignore = ["S101", "S311"]                   # asserts are how tests work; random is fine for games and fixtures
-per-file-ignores = { "stages/*/breaklab/*" = ["B", "E", "F", "UP", "A"], "stages/*/exercises/*" = ["S", "E501"], "stages/*/solutions/*" = ["S", "E501"] }
+per-file-ignores = { "stages/*/breaklab/*" = ["B", "E", "F", "UP", "A", "I"], "stages/*/exercises/*" = ["S", "E501"], "stages/*/solutions/*" = ["S", "E501"], "stages/*/eval/*" = ["E501"], "stages/*/tests/*" = ["E501"] }
 
 [tool.mypy]
 python_version = "3.13"

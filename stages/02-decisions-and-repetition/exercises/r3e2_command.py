@@ -1,4 +1,4 @@
-# r3e2 — command
+# r3e2 - command
 # One word typed by a player. Print the response:
 #   'north' or 'n' -> You walk north.
 #   'look'         -> You see a door.

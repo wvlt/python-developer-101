@@ -3,6 +3,7 @@
 Each row is (exercise file, what is typed in, what must be printed). Read the rows before you start an
 exercise; they are the examples. `just test 02 -k r4e` runs only rung 4's exercises.
 """
+
 import pytest
 
 CASES = [
@@ -27,7 +28,9 @@ CASES = [
     pytest.param("r3e2_command", "dance\n", "I do not understand.", id="r3e2-c"),
     pytest.param("r4e1_until_stop", "a\nb\nstop\n", "2", id="r4e1-a"),
     pytest.param("r4e1_until_stop", "stop\n", "0", id="r4e1-b"),
-    pytest.param("r4e2_valid_number", "abc\n11\n5\n", "not a number\nout of range\nGot 5", id="r4e2-a"),
+    pytest.param(
+        "r4e2_valid_number", "abc\n11\n5\n", "not a number\nout of range\nGot 5", id="r4e2-a"
+    ),
     pytest.param("r4e2_valid_number", "10\n", "Got 10", id="r4e2-b"),
     pytest.param("r4e3_countdown", "3\n", "3\n2\n1\nGo", id="r4e3-a"),
     pytest.param("r4e3_countdown", "1\n", "1\nGo", id="r4e3-b"),
@@ -37,7 +40,12 @@ CASES = [
     pytest.param("r5e2_sum_to", "1\n", "1", id="r5e2-b"),
     pytest.param("r5e3_evens_between", "3\n8\n", "4\n6\n8", id="r5e3-a"),
     pytest.param("r5e3_evens_between", "2\n2\n", "2", id="r5e3-b"),
-    pytest.param("r5e4_times_table", "2\n", "2 x 1 = 2\n2 x 2 = 4\n2 x 3 = 6\n2 x 4 = 8\n2 x 5 = 10\n2 x 6 = 12\n2 x 7 = 14\n2 x 8 = 16\n2 x 9 = 18\n2 x 10 = 20", id="r5e4-a"),
+    pytest.param(
+        "r5e4_times_table",
+        "2\n",
+        "2 x 1 = 2\n2 x 2 = 4\n2 x 3 = 6\n2 x 4 = 8\n2 x 5 = 10\n2 x 6 = 12\n2 x 7 = 14\n2 x 8 = 16\n2 x 9 = 18\n2 x 10 = 20",
+        id="r5e4-a",
+    ),
     pytest.param("r6e1_first_multiple_over", "7\n100\n", "105", id="r6e1-a"),
     pytest.param("r6e1_first_multiple_over", "5\n5\n", "10", id="r6e1-b"),
     pytest.param("r6e2_skip_threes", "7\n", "1\n2\n4\n5\n7", id="r6e2-a"),
@@ -58,7 +66,12 @@ CASES = [
     pytest.param("r8e4_any_negative", "2\n0\n5\n", "no", id="r8e4-b"),
     pytest.param("r9b1_total_bug", "3\n4\n9\n2\n", "15\n9", id="r9b1-a"),
     pytest.param("r9b1_total_bug", "2\n-5\n-3\n", "-8\n-3", id="r9b1-b"),
-    pytest.param("r11e1_guess_the_number", "42\n50\nabc\n25\n42\n", "lower\nnumbers only\nhigher\ncorrect in 3", id="r11e1-a"),
+    pytest.param(
+        "r11e1_guess_the_number",
+        "42\n50\nabc\n25\n42\n",
+        "lower\nnumbers only\nhigher\ncorrect in 3",
+        id="r11e1-a",
+    ),
     pytest.param("r11e1_guess_the_number", "1\n1\n", "correct in 1", id="r11e1-b"),
 ]
 

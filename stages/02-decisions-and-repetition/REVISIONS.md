@@ -15,7 +15,8 @@ Rung-level change log for this stage. Every change to a rung, exercise, hidden c
   - The game (r11) takes the secret as its first input so tests can play it; the stretch adds `random`.
   - Threshold 56/62 (90 %).
   - `zip(strict=True)` is taught as the default; a hidden case for r7e2 has equal lengths only, because unequal lengths with `strict=True` raise and the exercise shape (stdout comparison) cannot express "raises" until stage 5. Noted as a gap for the s05 reviser: add a case there that expects the `ValueError`.
+- 2026-11-04 · entry condition · Learner read-through (v1.0.0): the first `just test 02` shows `53 failed, 1 passed`, not `54 failed`, because one visible case of the planted bug `r9b1` passes with the bug in place. Wording corrected. Step change.
 
 ## Reference run
 
-Pending: every code block executed on the pins by a maintainer at s02 verification; hidden tests against `solutions/` pass in CI from v0.4.
+Pending: every code block executed on the pins by a maintainer at s02 verification; hidden tests against `solutions/` pass in CI from v0.4. At v1.0.0 the visible-test counts per rung (`6, 7, 6, 6, 7, 6, 4, 8, 2, 2`), the planted bug's `ruff` output (two A001 findings) and its `1 failed, 1 passed` were confirmed.

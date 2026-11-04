@@ -1,4 +1,4 @@
-# r2e3 — twice as text
+# r2e3 - twice as text
 # A whole number. Print it written twice, as text, with nothing between.
 # Example: 12 -> prints 1212
 # Then on a second line print the number doubled as a number.

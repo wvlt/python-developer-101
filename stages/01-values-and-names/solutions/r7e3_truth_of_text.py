@@ -1,4 +1,4 @@
-# r7e3 — truth of text
+# r7e3 - truth of text
 # One line of text (possibly empty). Print the truth value of the text itself, then of the text
 # as a whole number if it is one. Only whole-number input is given.
 # Example: 5 -> prints True then True

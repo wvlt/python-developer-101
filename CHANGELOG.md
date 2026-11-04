@@ -2,6 +2,26 @@
 
 Semantic versioning per [11 — Curriculum maintenance](docs/11-curriculum-maintenance.md): major = stage structure; minor = substantive rung, gate, convention or pin-policy change, a stage rung-numbered; patch = pins, reading-list swaps, bestiary additions, fixes.
 
+## [1.0.0] — 2026-11-04
+
+Verified and published.
+
+- **Stage 0 reference run** on macOS against the 3.13 interpreter recorded in `PINS.md` (Reference runs): 22 code blocks, 19 matched the brief as written, three rung changes: the prompt's banner is two lines; Way 3's traceback shown in full with its marker line; the `day1.py` comment uses a plain hyphen so that removing the `#` reports `invalid syntax` rather than an invalid-character error about an em dash. Table in `stages/00-hello-python/REVISIONS.md`.
+- **Learner read-through of stages 0–2**: `isdigit` was assumed by stage 2 rung 4 and listed in stage 1's Provides but never shown; added to stage 1 rung 5. Stage 2's entry condition said `54 failed`; the first run is `53 failed, 1 passed` because one planted-bug case passes with the bug in place. Prompt examples in stage 1 evaluated; visible-test counts per rung confirmed for both stages.
+- Authoring rule 8 (docs/15): plain punctuation inside code blocks. All exercise, solution and break-lab headers changed from em dash to hyphen; stage code formatted with `ruff format`; pre-commit `ruff` hooks scoped to `stages/` and excluding break-lab and planted-bug files.
+- `PINS.md` gains a *Reference runs* table so that the patch version a stage was verified on lives there and nowhere else; `check_pins.py` enforces this for `REVISIONS.md` too.
+- Board: stage 0 `verified`; curriculum version 1.0.0.
+
+## [0.5.0] — 2026-11-04
+
+The board and the player.
+
+- `status/board.json`: course identity, four tiers, eleven stages with hours and build/learner states (stage 0 in progress, stage 1 ready, the rest locked; stages 3–10 `outline`), a maintainer queue of eight items keyed to unlock events, activity log.
+- `PROGRESS.md` created from the template and populated by `scripts/make_progress.py` with the 29 rungs of stages 0–2 (outline stages contribute no rows).
+- `BOARD.md`, the README board block and `site/data.json` rendered by `scripts/render_board.py`; `--check` in CI.
+- GitHub Pages enabled (workflow build); the course player is live and opens on stage 0 rung 0.
+- Thresholds in docs/01, docs/06, docs/14 and the progress template reconciled with the authored counts (s01 57/63; s02 56/62).
+
 ## [0.4.0] — 2026-11-04
 
 The briefs.
@@ -11,7 +31,7 @@ The briefs.
 - **Stage 2** rung-numbered: eleven rungs (`if`/`else`; `elif` and the conditional expression; `match`; `while` and ask-until-valid; `for`/`range`; `break`/`continue`/`else`; `enumerate`/`zip`; accumulators, flags, nesting; `ruff` with a planted bug carrying one loud and one quiet fault; GitHub fork, branch, PR; guess-the-number). 26 exercises, 54 visible, 62 hidden (threshold 56), nine break-lab snippets; gate `s02-g1`–`g5`.
 - **Stages 3–10** at outline level: parts and planned rungs with time estimates and rung IDs, binding Contracts, Break-lab targets by bestiary ID, Gate IDs with thresholds, kill criteria, stretch, reading; each `REVISIONS.md` states the outline status and the open items for rung-numbering.
 - Harness: `just test NN -k rMe` filters by rung (visible test ids are `rMeK-a`); `--tb=short` for beginner-readable failures; `ruff` rule set `A` enabled for shadowed built-ins; long header comments in exercises exempt from E501; `.python-version` pins the minor for `uv`.
-- Thresholds in docs/01, docs/06, docs/14 and the progress template reconciled with the authored counts (s01 57/63; s02 56/62); the threshold rule restated as "about 90 %".
+- The threshold rule in docs/06 restated as "about 90 %".
 
 ## [0.3.0] — 2026-11-04
 

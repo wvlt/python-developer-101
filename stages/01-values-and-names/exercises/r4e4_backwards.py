@@ -1,4 +1,4 @@
-# r4e4 — backwards
+# r4e4 - backwards
 # One line of text. Print it backwards.
 # Example: stressed -> prints desserts
 text = input()

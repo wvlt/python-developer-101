@@ -73,7 +73,8 @@ The exact interpreter each stage's code blocks were last executed on. Briefs and
 | Date | Stage | Platform | Interpreter | Pin at the time | Result |
 |---|---|---|---|---|---|
 | 2026-11-04 | s00 | macOS 15, Apple silicon | CPython **3.13.1** (system package manager; the pinned installer was not run on the maintainer's machine) | 3.13.17 | 22 blocks; 19 matched, 3 brief changes (`stages/00-hello-python/REVISIONS.md`). Error messages and `print`/`input` behaviour are identical across 3.13 patch releases; re-run on the pinned installer and on Windows before the first Windows learner. |
-| 2026-11-04 | s01, s02 | macOS 15 | CPython **3.13.1** | 3.13.17 | Prompt examples evaluated and visible-test counts confirmed (`REVISIONS.md` of each stage); full by-hand run pending at stage verification. |
+| 2026-11-04 | s00 | macOS 15, Apple silicon | CPython **3.13.18** (`uv python install 3.13`, the interpreter learners get from stage 1) | 3.13.17 | Same 22 blocks re-run after the three brief changes; 22 of 22 match the brief as published at v1.0.0. The 3.13.17 installer and Windows remain the first two maintainer-queue items. |
+| 2026-11-04 | s01, s02 | macOS 15 | CPython **3.13.1**; reference solutions also run against the hidden tests on **3.13.18** (63/63, 62/62) | 3.13.17 | Prompt examples evaluated and visible-test counts confirmed (`REVISIONS.md` of each stage); full by-hand run pending at stage verification. |
 
 ## Deprecation log
 

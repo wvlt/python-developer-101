@@ -44,4 +44,6 @@ Executed 2026-11-04 on macOS 15 (Apple silicon) with the CPython 3.13 interprete
 | stretch | `"=" * 20`, `"ab" * 3`, `"ab" + 3` | guess first | 20 `=`; `ababab`; `TypeError: can only concatenate str (not "int") to str` | yes |
 | stretch | `help(print)` | help screen | `print(*args, sep=' ', end='\n', file=None, flush=False)` … | yes |
 
+**Second run, same day:** after the three changes above, the 22 blocks were re-run on the `uv`-managed 3.13 interpreter (the one stage 1 installs; patch level in PINS.md → Reference runs). 22 of 22 matched the published brief; no further changes.
+
 Re-run this table at every re-pin (`docs/11`), and on Windows before the first Windows learner starts.

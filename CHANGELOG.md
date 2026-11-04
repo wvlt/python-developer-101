@@ -2,6 +2,10 @@
 
 Semantic versioning per [11 — Curriculum maintenance](docs/11-curriculum-maintenance.md): major = stage structure; minor = substantive rung, gate, convention or pin-policy change, a stage rung-numbered; patch = pins, reading-list swaps, bestiary additions, fixes.
 
+## [1.0.1] — 2026-11-04
+
+- Stage 0 reference run repeated on the `uv`-managed CPython 3.13 interpreter (the one stage 1 installs): 22 of 22 blocks match the published brief. Reference solutions for stages 1–2 pass all hidden tests on it (63/63, 62/62). Recorded in `PINS.md → Reference runs`.
+
 ## [1.0.0] — 2026-11-04
 
 Verified and published.

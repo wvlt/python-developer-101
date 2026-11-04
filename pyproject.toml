@@ -1,0 +1,47 @@
+[project]
+name = "python-developer-101"
+version = "1.0.0"
+description = "From zero to a junior Python developer useful in week one: a ten-stage, evidence-based curriculum."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+# The course itself has no runtime dependencies: every exercise through stage 5 is standard library only.
+dependencies = []
+
+[project.optional-dependencies]
+# The learner's toolchain (tooling ramp in docs/02). Install with:  uv sync --extra dev
+dev = [
+  "pytest>=9.2",       # run by the learner from s01, written by the learner from s06
+  "pytest-cov>=7.1",   # coverage from s09
+  "ruff>=0.17",        # s02 (check), s09 (format)
+  "mypy>=2.4",         # s09
+  "pre-commit>=4.7",   # s09 (learner), always (maintainers)
+]
+# Stage 6 adds the two third-party packages the course touches; the brief has the learner run `uv add` themselves,
+# so they are listed here only so `uv sync --extra s06` reproduces a finished stage-6 environment.
+s06 = ["requests>=2.34", "rich>=15.0"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+# Learners' exercise files are scripts that read input() and print(); allow the beginner-friendly shapes.
+extend-exclude = ["stages/*/scratch"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]   # S = bandit: flags eval(), pickle of untrusted data, bare except
+ignore = ["S101", "S311"]                   # asserts are how tests work; random is fine for games and fixtures
+per-file-ignores = { "stages/*/breaklab/*" = ["B", "E", "F", "UP"], "stages/*/exercises/*" = ["S"], "stages/*/solutions/*" = ["S"] }
+
+[tool.mypy]
+python_version = "3.13"
+strict = true                 # required from stage 9; earlier stages are not type-checked
+warn_unreachable = true
+files = ["stages/09-*/src", "stages/10-*/src"]
+
+[tool.pytest.ini_options]
+testpaths = ["stages"]
+python_files = ["test_*.py"]
+addopts = "-q -p no:cacheprovider"

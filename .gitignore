@@ -1,0 +1,36 @@
+# Environment (there are no secrets in this course, but the habit starts here)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated fixture (rebuild with `just data`; deterministic, see data/README.md)
+data/library/
+
+# Eval harness run directories: keep summary.json, drop the bulky parts
+stages/*/eval/runs/*/results.jsonl
+stages/*/eval/runs/*/junit.xml
+stages/*/eval/runs/*/*.log
+
+# Learner scratch directories inside stages (anything named scratch/)
+stages/*/scratch/
+
+# Build output
+dist/
+build/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

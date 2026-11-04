@@ -1,0 +1,46 @@
+# Required for maintainers; optional for learners before stage 9 (tooling ramp). Install once:  uv run pre-commit install
+# Hook revisions are pins; re-pin per PINS.md.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.3
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+  - repo: local
+    hooks:
+      - id: no-dotenv
+        name: .env must never be committed
+        entry: bash -c 'git diff --cached --name-only | grep -E "(^|/)\.env$" && { echo ".env staged"; exit 1; } || exit 0'
+        language: system
+        pass_filenames: false
+      - id: links
+        name: relative markdown links resolve
+        entry: python scripts/check_links.py
+        language: system
+        pass_filenames: false
+        files: \.md$
+      - id: pins
+        name: no pinned identifiers in briefs or docs
+        entry: python scripts/check_pins.py
+        language: system
+        pass_filenames: false
+        files: \.md$
+      - id: board
+        name: board rendered
+        entry: python scripts/render_board.py --check
+        language: system
+        pass_filenames: false

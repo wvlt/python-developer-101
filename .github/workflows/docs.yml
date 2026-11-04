@@ -1,0 +1,48 @@
+name: docs
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Relative links resolve
+        run: python scripts/check_links.py
+      - name: Board is rendered from status/board.json
+        run: python scripts/render_board.py --check
+      - name: Every gated stage has Contract, Gate and REVISIONS.md
+        run: |
+          set -e
+          for d in stages/*/; do
+            n=$(basename "$d" | cut -c1-2)
+            test -f "$d/REVISIONS.md" || { echo "missing $d/REVISIONS.md"; exit 1; }
+            grep -q '^## Contract' "$d/README.md" || { echo "missing Contract in $d"; exit 1; }
+            if [ "$n" != "00" ]; then
+              grep -q '^## Gate' "$d/README.md" || { echo "missing Gate in $d"; exit 1; }
+              grep -Eq "s${n}-g1\b" "$d/README.md" || { echo "gate IDs missing in $d"; exit 1; }
+            fi
+          done
+      - name: No pinned identifiers leaked into briefs or docs
+        run: python scripts/check_pins.py
+      - name: Fixture is deterministic
+        run: |
+          python data/build_files.py --out /tmp/a
+          python data/build_files.py --out /tmp/b
+          diff -r /tmp/a /tmp/b && echo "deterministic"
+      - name: Course tests pass against the reference solutions
+        run: |
+          pip install -q pytest
+          python scripts/eval.py --solutions --all
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
